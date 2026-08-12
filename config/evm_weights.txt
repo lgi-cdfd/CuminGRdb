@@ -1,0 +1,11 @@
+# ==============================================================================
+# Project: CuminGRdb (Cuminum cyminum L. Genome Project)
+# Configuration: EvidenceModeler (EVM) Evidence Weights Matrix
+# Author: Dr. Ajay Kumar Mahato (BRIC-CDFD)
+# ==============================================================================
+# Type                 Source          Weight
+ABINITIO_PREDICTION    GeneMark        1
+ABINITIO_PREDICTION    SNAP            1
+PROTEIN                miniprot        5
+TRANSCRIPT             transdecoder    10
+TRANSCRIPT             pasa            10

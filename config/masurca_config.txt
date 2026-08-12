@@ -1,0 +1,21 @@
+# ==============================================================================
+# Project: CuminGRdb (Cuminum cyminum L. Genome Project)
+# Configuration: MaSuRCA Assembler Configuration
+# Author: Dr. Ajay Kumar Mahato (BRIC-CDFD)
+# ==============================================================================
+
+# DATA SECTIONS
+DATA
+# Illumina paired-end reads (PE: prefix mean stdev file1 file2)
+PE = pe 180 20 data/raw/SRR10076761_1.fastq.gz data/raw/SRR10076761_2.fastq.gz
+END
+
+# PARAMETERS
+PARAMETERS
+# Set to 1 for genome assembly
+GRAPH_KMER_SIZE = auto
+USE_LINKING_MATATES = 1
+NUM_THREADS = 32
+JF_SIZE = 40000000000
+DO_HOMOPOLYMER_TRIM = 0
+END

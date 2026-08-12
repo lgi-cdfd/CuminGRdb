@@ -1,0 +1,16 @@
+# ==============================================================================
+# Project: CuminGRdb (Cuminum cyminum L. Genome Project)
+# Configuration: EDTA (Extensive de-novo TE Annotator) Parameters
+# Author: Dr. Ajay Kumar Mahato (BRIC-CDFD)
+# ==============================================================================
+
+genome = data/raw/Cuminum_cyminum_genome_assembly.fasta
+species = others
+step = all
+overwrite = 0
+cds = data/raw/Cuminum_cyminum_predicted_cds.fasta
+curatedlib = 0
+sensitive = 1
+anno = 1
+evaluate = 1
+threads = 32

@@ -1,0 +1,6 @@
+Expectation_Threshold,Interactions,Percentage_of_All_Interactions,Unique_miRNAs,Unique_Target_Genes
+<= 1.0,5910,0.67,1370,256
+<= 2.0,12945,1.46,3967,2225
+<= 3.0,57453,6.47,7742,14067
+<= 4.0,320804,36.13,8184,27718
+<= 5.0,887911,100.0,8184,30180

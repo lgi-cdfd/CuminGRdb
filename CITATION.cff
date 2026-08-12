@@ -1,0 +1,39 @@
+cff-version: 1.2.0
+message: "If you use CuminGRdb datasets, annotations, or code in your research, please cite it as below."
+title: "A high-quality draft genome assembly, comprehensive annotation, and integrated breeding database (CuminGRdb) for cumin (Cuminum cyminum L.)"
+authors:
+  - family-names: Mahato
+    given-names: Ajay Kumar
+    email: akmahato@cdfd.org.in
+    affiliation: "Laboratory of Genome Informatics, Centre for DNA Fingerprinting and Diagnostics (CDFD), Hyderabad, India"
+  - family-names: Eerapagula
+    given-names: Ramesh
+    affiliation: "Laboratory of Genome Informatics, Centre for DNA Fingerprinting and Diagnostics (CDFD), Hyderabad, India"
+  - family-names: Singh
+    given-names: Rakesh
+    affiliation: "Division of Genomic Resources, ICAR–National Bureau of Plant Genetic Resources (ICAR-NBPGR), New Delhi, India"
+  - family-names: Mishra
+    given-names: Avinash
+    affiliation: "Applied Phycology and Biotechnology Division, CSIR–Central Salt & Marine Chemicals Research Institute (CSIR-CSMCRI), Bhavnagar, India"
+  - family-names: Devi
+    given-names: Lakshmi
+    affiliation: "Laboratory of Genome Informatics, Centre for DNA Fingerprinting and Diagnostics (CDFD), Hyderabad, India"
+  - family-names: Kushwaha
+    given-names: Priyanka
+    affiliation: "Laboratory of Genome Informatics, Centre for DNA Fingerprinting and Diagnostics (CDFD), Hyderabad, India"
+  - family-names: Bhagat
+    given-names: Ankit
+    affiliation: "Laboratory of Genome Informatics, Centre for DNA Fingerprinting and Diagnostics (CDFD), Hyderabad, India"
+  - family-names: Prasad
+    given-names: Bishun Deo
+    affiliation: "Department of Agricultural Biotechnology and Molecular Biology, Dr. Rajendra Prasad Central Agricultural University, Pusa, India"
+  - family-names: Sahni
+    given-names: Sangita
+    affiliation: "Department of Plant Pathology, T.C.A., Dholi, Dr. Rajendra Prasad Central Agricultural University, Pusa, India"
+  - family-names: Singh
+    given-names: Nagendra Kumar
+    affiliation: "National Institute for Plant Biotechnology (ICAR-NIPB), New Delhi, India"
+journal: "Scientific Data"
+year: 2026
+url: "https://database.cdfd.org.in/cumingrdb/"
+license: "CC-BY-4.0"

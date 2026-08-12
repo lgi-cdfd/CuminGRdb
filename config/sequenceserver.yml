@@ -1,0 +1,12 @@
+# ==============================================================================
+# Project: CuminGRdb (Cuminum cyminum L. Genome Project)
+# Configuration: SequenceServer BLAST Server Configuration
+# Author: Dr. Ajay Kumar Mahato (BRIC-CDFD)
+# ==============================================================================
+
+:database_dir: ./blast_db
+:num_threads: 16
+:port: 4567
+:host: 0.0.0.0
+:title: "CuminGRdb BLAST Server (Cuminum cyminum L.)"
+:explanation: "High-throughput BLAST searches against cumin genome assembly, CDS, proteome, and organelle databases."

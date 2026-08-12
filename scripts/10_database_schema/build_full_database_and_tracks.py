@@ -1,0 +1,969 @@
+#!/usr/bin/env python3
+# ==============================================================================
+# Project: CuminGRdb (Cuminum cyminum L. Genome Project)
+# Script: build_full_database_and_tracks.py
+# Description: Complete multi-omics database builder and JBrowse 2 track generator.
+# Author: Dr. Ajay Kumar Mahato
+# Affiliation: Laboratory of Genome Informatics, BRIC-CDFD, India
+# Repository: https://database.cdfd.org.in/cumingrdb/
+# License: MIT License
+# ==============================================================================
+
+"""
+build_full_database_and_tracks.py
+Master bioinformatics build pipeline for CuminGRdb:
+1. Standardizes Gene IDs (CcGene_XXXXX) and Contig IDs (CcContig_XXXXX) across all datasets.
+2. Formats and indexes the 147,524 contig draft genome assembly (cumin_ncbi.fsa) using samtools faidx.
+3. Intersects SSR markers with Gene GFF3 loci to identify Genic vs Genomic/Intergenic SSRs and map Gene IDs.
+4. Generates 5 sorted, bgzipped, and tabix-indexed GFF3 tracks for JBrowse 2:
+   - Gene Models & Functional Annotations (db/cumin_genes.gff.gz)
+   - EDTA Repeatmasking Results (db/cumin_repeats.gff.gz)
+   - Mined SSR Markers & Designed Primers (db/cumin_ssrs.gff.gz)
+   - Genomic-intersected miRNA Target Interactions (db/cumin_mirna.gff.gz)
+   - Secondary Metabolite Biosynthetic Genes (db/cumin_sec_metabolites.gff.gz)
+5. Builds and indexes the comprehensive SQLite relational database (db/cumin_database.sqlite).
+6. Generates production JBrowse 2 config.json.
+"""
+
+import os
+import sys
+import re
+import json
+import sqlite3
+import subprocess
+import pandas as pd
+import csv
+from collections import defaultdict
+
+def main():
+    base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+    db_dir = os.path.join(base_dir, 'db')
+    os.makedirs(db_dir, exist_ok=True)
+
+    print("==========================================================")
+    print(" CuminGRdb Master Pipeline: Multi-Track & Database Builder ")
+    print("==========================================================")
+
+    # ----------------------------------------------------
+    # STEP 1: PARSE CONTIGS AND GENES TO BUILD ID MAPPINGS
+    # ----------------------------------------------------
+    print("\n[*] Step 1: Building Master Gene ID and Contig ID Mappings...")
+    
+    # Contigs from cumin_ncbi.fsa
+    fsa_path = os.path.join(base_dir, 'cumin_ncbi.fsa')
+    if not os.path.exists(fsa_path):
+        print(f"[-] Error: Genome FASTA not found at {fsa_path}")
+        sys.exit(1)
+        
+    contig_old_list = []
+    with open(fsa_path, 'r', encoding='utf-8', errors='ignore') as f:
+        for line in f:
+            if line.startswith('>'):
+                cid = line[1:].strip().split()[0]
+                contig_old_list.append(cid)
+    
+    annot_csv = os.path.join(base_dir, 'annotations.csv')
+    df_annot_raw = pd.read_csv(annot_csv) if os.path.exists(annot_csv) else None
+    genes_csv = os.path.join(base_dir, 'genes.csv')
+    df_genes_raw = pd.read_csv(genes_csv) if os.path.exists(genes_csv) else None
+
+    # Master scaffolds across FASTA, genes, and SSRs
+    all_scaffolds = set(contig_old_list)
+    if df_genes_raw is not None and 'Scaffold' in df_genes_raw.columns:
+        all_scaffolds.update(df_genes_raw['Scaffold'].dropna().astype(str).tolist())
+    ssr_csv = os.path.join(base_dir, 'ssr_markers.csv')
+    if os.path.exists(ssr_csv):
+        try:
+            df_ssrs_tmp = pd.read_csv(ssr_csv)
+            if 'Scaffold' in df_ssrs_tmp.columns:
+                all_scaffolds.update(df_ssrs_tmp['Scaffold'].dropna().astype(str).tolist())
+        except Exception:
+            pass
+
+    sorted_all_scaffolds = sorted(list(all_scaffolds))
+    contig_map = {old: f"CcContig_{idx+1:06d}" for idx, old in enumerate(sorted_all_scaffolds)}
+    print(f"[+] Loaded {len(sorted_all_scaffolds):,} master scaffolds across assembly, genes, and SSRs.")
+
+    gene_old_list = []
+    if df_annot_raw is not None:
+        gene_old_list.extend(df_annot_raw['Gene_ID'].dropna().astype(str).tolist())
+    if df_genes_raw is not None:
+        gene_old_list.extend(df_genes_raw['Gene_ID'].dropna().astype(str).tolist())
+        
+    unique_base_genes = set()
+    for gid in gene_old_list:
+        base_gid = re.sub(r'^evm\.(model|TU)\.', '', gid)
+        unique_base_genes.add(base_gid)
+        
+    sorted_base_genes = sorted(list(unique_base_genes))
+    gene_map = {}
+    for idx, base_gid in enumerate(sorted_base_genes, 1):
+        clean_new = f"CcGene_{idx:05d}"
+        gene_map[f"evm.model.{base_gid}"] = clean_new
+        gene_map[f"evm.TU.{base_gid}"] = clean_new
+        gene_map[base_gid] = clean_new
+
+    print(f"[+] Created standardized mappings for {len(sorted_base_genes):,} genes.")
+
+    id_map_path = os.path.join(base_dir, 'id_mapping.tsv')
+    with open(id_map_path, 'w', encoding='utf-8') as f:
+        f.write("#old_id\tnew_id\ttype\n")
+        for old_c in contig_old_list:
+            f.write(f"{old_c}\t{contig_map[old_c]}\tcontig\n")
+        for old_g in sorted(gene_map.keys()):
+            f.write(f"{old_g}\t{gene_map[old_g]}\tgene\n")
+    print(f"[✓] Saved master mapping file to {id_map_path}")
+
+    # ----------------------------------------------------
+    # STEP 2: FORMAT & INDEX REFERENCE GENOME ASSEMBLY
+    # ----------------------------------------------------
+    print("\n[*] Step 2: Preparing Contig Assembly Reference FASTA & Indexing...")
+    fsa_renamed_path = os.path.join(base_dir, 'cumin_ncbi_renamed.fsa')
+    
+    with open(fsa_path, 'r', encoding='utf-8', errors='ignore') as infile, \
+         open(fsa_renamed_path, 'w', encoding='utf-8') as outfile:
+        for line in infile:
+            if line.startswith('>'):
+                old_cid = line[1:].strip().split()[0]
+                new_cid = contig_map.get(old_cid, old_cid)
+                outfile.write(f">{new_cid} {old_cid} [organism=Cuminum cyminum]\n")
+            else:
+                outfile.write(line)
+                
+    subprocess.run(['samtools', 'faidx', fsa_renamed_path], check=True)
+    print(f"[✓] Contig assembly formatted and indexed: {fsa_renamed_path}.fai")
+
+    def write_sort_tabix_gff(gff_lines, out_prefix):
+        raw_gff = out_prefix + ".raw.gff"
+        gz_gff = out_prefix + ".gff.gz"
+        
+        headers = [l for l in gff_lines if l.startswith('#')]
+        features = [l for l in gff_lines if not l.startswith('#')]
+
+        def sort_key(l):
+            parts = l.strip().split('\t')
+            if len(parts) >= 5:
+                try:
+                    c = parts[0]
+                    s = int(parts[3])
+                    e = int(parts[4])
+                    return (c, min(s, e))
+                except ValueError:
+                    return (parts[0], 0)
+            return ("", 0)
+
+        features.sort(key=sort_key)
+
+        with open(raw_gff, 'w', encoding='utf-8') as f:
+            f.writelines(headers)
+            f.writelines(features)
+
+        if os.path.exists(gz_gff):
+            os.remove(gz_gff)
+        if os.path.exists(gz_gff + ".tbi"):
+            os.remove(gz_gff + ".tbi")
+            
+        subprocess.run(['bgzip', '-f', raw_gff], check=True)
+        os.rename(raw_gff + ".gz", gz_gff)
+        
+        subprocess.run(['tabix', '-p', 'gff', gz_gff], check=True)
+        print(f"[✓] Track indexed: {gz_gff}")
+        return gz_gff
+
+    # ----------------------------------------------------
+    # STEP 3: PARSE GENE MODELS & BUILD GENES GFF3 TRACK
+    # ----------------------------------------------------
+    print("\n[*] Step 3: Building Gene Models & Functional Annotations GFF3 Track...")
+    
+    annot_dict = {}
+
+    # 1. Parse generic_export.txt (OmicsBox / Blast2GO full exports)
+    generic_txt = os.path.join(base_dir, 'generic_export.txt')
+    if os.path.exists(generic_txt):
+        with open(generic_txt, 'r', encoding='utf-8', errors='ignore') as f:
+            reader = csv.DictReader(f)
+            for r in reader:
+                raw_name = r.get('Sequence Name', '').strip()
+                if not raw_name: continue
+                num_match = re.search(r'\d+', raw_name)
+                gid_key = f"CcGene_{int(num_match.group()):05d}" if num_match else gene_map.get(raw_name, raw_name)
+                
+                desc = r.get('Sequence Description', '').strip()
+                if desc in ['---NA---', 'nan', '-', '']: desc = ''
+                
+                go_ids = r.get('Annotation GO ID', '').strip()
+                go_terms = r.get('Annotation GO Term', '').strip()
+                ec_code = r.get('Enzyme Code', '').strip()
+                ec_name = r.get('Enzyme Name', '').strip()
+                ipr_go_ids = r.get('InterPro GO ID', '').strip()
+                ipr_go_terms = r.get('InterPro GO Term', '').strip()
+                ipr_name = r.get('InterPro Name', '').strip()
+                ipr_sigs = r.get('InterPro Signatures', '').strip()
+
+                annot_dict[gid_key] = {
+                    'desc': desc or 'Predicted protein',
+                    'go_ids': go_ids,
+                    'go_terms': go_terms,
+                    'ec_code': ec_code,
+                    'ec_name': ec_name,
+                    'ipr_go_ids': ipr_go_ids,
+                    'ipr_go_terms': ipr_go_terms,
+                    'ipr_name': ipr_name,
+                    'ipr_sigs': ipr_sigs,
+                    'kegg': '', 'nr': '', 'sp': ''
+                }
+
+    # 2. Parse cumin.annot
+    cumin_annot = os.path.join(base_dir, 'cumin.annot')
+    if os.path.exists(cumin_annot):
+        with open(cumin_annot, 'r', encoding='utf-8', errors='ignore') as f:
+            for line in f:
+                if not line.strip() or line.startswith('#'): continue
+                parts = line.strip().split('\t')
+                if len(parts) >= 2:
+                    raw_name = parts[0].strip()
+                    num_match = re.search(r'\d+', raw_name)
+                    gid_key = f"CcGene_{int(num_match.group()):05d}" if num_match else raw_name
+                    go_id = parts[1].strip()
+                    desc_extra = parts[2].strip() if len(parts) >= 3 else ''
+                    
+                    if gid_key in annot_dict:
+                        if go_id and go_id not in annot_dict[gid_key]['go_ids']:
+                            annot_dict[gid_key]['go_ids'] += (';' + go_id) if annot_dict[gid_key]['go_ids'] else go_id
+                        if desc_extra and (not annot_dict[gid_key]['desc'] or annot_dict[gid_key]['desc'] == 'Predicted protein'):
+                            annot_dict[gid_key]['desc'] = desc_extra
+                    else:
+                        annot_dict[gid_key] = {
+                            'desc': desc_extra or 'Predicted protein',
+                            'go_ids': go_id, 'go_terms': '', 'ec_code': '', 'ec_name': '',
+                            'ipr_go_ids': '', 'ipr_go_terms': '', 'ipr_name': '', 'ipr_sigs': '',
+                            'kegg': '', 'nr': '', 'sp': ''
+                        }
+
+    # 3. Fallback from annotations.csv
+    if df_annot_raw is not None:
+        for _, row in df_annot_raw.iterrows():
+            gid = str(row['Gene_ID']).strip()
+            new_gid = gene_map.get(gid, gid)
+            desc = str(row.get('Description', '')).strip()
+            gos = str(row.get('GOs', '')).strip()
+            kegg = str(row.get('KEGG_Pathway', '')).strip()
+            nr = str(row.get('NR_Hit', '')).strip()
+            sp = str(row.get('SwissProt_Hit', '')).strip()
+            
+            if new_gid in annot_dict:
+                if kegg and kegg != 'nan': annot_dict[new_gid]['kegg'] = kegg
+                if nr and nr != 'nan': annot_dict[new_gid]['nr'] = nr
+                if sp and sp != 'nan': annot_dict[new_gid]['sp'] = sp
+                if gos and gos != 'nan' and not annot_dict[new_gid]['go_ids']:
+                    annot_dict[new_gid]['go_ids'] = gos
+            else:
+                annot_dict[new_gid] = {
+                    'desc': desc if desc not in ['nan', '-'] else 'Predicted protein',
+                    'go_ids': gos if gos not in ['nan', '-'] else '',
+                    'go_terms': '', 'ec_code': '', 'ec_name': '',
+                    'ipr_go_ids': '', 'ipr_go_terms': '', 'ipr_name': '', 'ipr_sigs': '',
+                    'kegg': kegg if kegg not in ['nan', '-'] else '',
+                    'nr': nr if nr not in ['nan', '-'] else '',
+                    'sp': sp if sp not in ['nan', '-'] else ''
+                }
+
+    genes_gff_lines = ["##gff-version 3\n"]
+    parsed_genes_db = []
+    gene_coords_map = {}
+    gene_tree_by_contig = defaultdict(list) # contig -> list of (start, end, gene_id)
+
+    if df_genes_raw is not None:
+        df_models = df_genes_raw[df_genes_raw['Gene_ID'].str.contains('evm.model', na=False)]
+        for _, row in df_models.iterrows():
+            old_gid = str(row['Gene_ID']).strip()
+            new_gid = gene_map.get(old_gid, old_gid)
+            old_scaf = str(row['Scaffold']).strip()
+            new_scaf = contig_map.get(old_scaf, old_scaf)
+            s_raw = int(row['Start'])
+            e_raw = int(row['End'])
+            start = min(s_raw, e_raw)
+            end = max(s_raw, e_raw)
+            strand = str(row['Strand']).strip()
+            length = int(row['Length'])
+
+            ann = annot_dict.get(new_gid, {
+                'desc': 'Predicted protein', 'go_ids': '', 'go_terms': '',
+                'ec_code': '', 'ec_name': '', 'ipr_go_ids': '', 'ipr_go_terms': '',
+                'ipr_name': '', 'ipr_sigs': '', 'kegg': '', 'nr': '', 'sp': ''
+            })
+            gene_coords_map[new_gid] = (new_scaf, start, end, strand)
+            gene_tree_by_contig[new_scaf].append((start, end, new_gid))
+
+            attrs = f"ID={new_gid};Name={new_gid};description={ann['desc']}"
+            if ann['go_ids']: attrs += f";Ontology_term={ann['go_ids']}"
+            if ann['ec_code']: attrs += f";Dbxref=EC:{ann['ec_code']}"
+            if ann['ipr_sigs']: attrs += f";Dbxref=InterPro:{ann['ipr_sigs']}"
+            if ann['kegg']: attrs += f";Dbxref={ann['kegg']}"
+            
+            genes_gff_lines.append(f"{new_scaf}\tEVM\tgene\t{start}\t{end}\t.\t{strand}\t.\t{attrs}\n")
+
+            parsed_genes_db.append({
+                'gene_id': new_gid,
+                'contig': new_scaf,
+                'start': start,
+                'end': end,
+                'length': length,
+                'strand': strand,
+                'description': ann['desc'],
+                'go_terms': ann.get('go_terms', ''),
+                'go_ids': ann.get('go_ids', ''),
+                'ec_code': ann.get('ec_code', ''),
+                'ec_name': ann.get('ec_name', ''),
+                'interpro_go_ids': ann.get('ipr_go_ids', ''),
+                'interpro_go_terms': ann.get('ipr_go_terms', ''),
+                'interpro_name': ann.get('ipr_name', ''),
+                'interpro_signatures': ann.get('ipr_sigs', ''),
+                'kegg_pathway': ann.get('kegg', ''),
+                'nr_hit': ann.get('nr', ''),
+                'swissprot_hit': ann.get('sp', '')
+            })
+
+    write_sort_tabix_gff(genes_gff_lines, os.path.join(db_dir, 'cumin_genes'))
+    print(f"[+] Loaded {len(parsed_genes_db):,} gene models into track.")
+
+    # Build CDS and Exon feature trees for fine-grained SSR region classification
+    cds_tree_by_contig = defaultdict(list)
+    exon_tree_by_contig = defaultdict(list)
+    refined_gff = os.path.join(base_dir, 'cumin_refined_genes_clean.gff3')
+    if os.path.exists(refined_gff):
+        with open(refined_gff, 'r', encoding='utf-8', errors='ignore') as f:
+            for line in f:
+                if line.startswith('#') or not line.strip(): continue
+                parts = line.strip().split('\t')
+                if len(parts) >= 9:
+                    raw_scaf = parts[0]
+                    scaf = contig_map.get(raw_scaf, raw_scaf)
+                    ftype = parts[2]
+                    st = int(parts[3])
+                    en = int(parts[4])
+                    attrs = parts[8]
+                    gid_match = re.search(r'evm\.(?:TU|model)\.[A-Za-z0-9_]+\.\d+', attrs)
+                    if gid_match:
+                        clean_gid = gid_match.group(0).replace('evm.model.', 'evm.TU.')
+                        std_gid = gene_map.get(clean_gid, clean_gid)
+                        if ftype == 'CDS':
+                            cds_tree_by_contig[scaf].append((min(st, en), max(st, en), std_gid))
+                        elif ftype == 'exon':
+                            exon_tree_by_contig[scaf].append((min(st, en), max(st, en), std_gid))
+        print(f"[+] Built fine-grained CDS and Exon feature trees for {len(cds_tree_by_contig):,} scaffolds.")
+
+    # ----------------------------------------------------
+    # STEP 4: PROCESS REPEATMASKING GFF3 TRACK
+    # ----------------------------------------------------
+    print("\n[*] Step 4: Building Repeatmasking EDTA Results GFF3 Track...")
+    repeats_gff_in = os.path.join(base_dir, 'cumin_repeats_annotation.gff3')
+    repeats_gff_lines = ["##gff-version 3\n"]
+    
+    if os.path.exists(repeats_gff_in):
+        with open(repeats_gff_in, 'r', encoding='utf-8', errors='ignore') as f:
+            for line in f:
+                if line.startswith('#'): continue
+                parts = line.strip().split('\t')
+                if len(parts) == 9:
+                    old_scaf = parts[0]
+                    parts[0] = contig_map.get(old_scaf, old_scaf)
+                    s_raw = int(parts[3])
+                    e_raw = int(parts[4])
+                    parts[3] = str(min(s_raw, e_raw))
+                    parts[4] = str(max(s_raw, e_raw))
+                    repeats_gff_lines.append('\t'.join(parts) + '\n')
+
+    write_sort_tabix_gff(repeats_gff_lines, os.path.join(db_dir, 'cumin_repeats'))
+
+    # ----------------------------------------------------
+    # STEP 5: PROCESS KRAIT SSRs & PRIMERS, INTERSECT WITH GENE LOCI
+    # ----------------------------------------------------
+    print("\n[*] Step 5: Standardizing Krait SSR IDs & Primers, Intersecting with Gene Models & Building Track...")
+    krait_ssr_path = os.path.join(base_dir, 'krait-ssr')
+    krait_primers_path = os.path.join(base_dir, 'krait-ssr-primers')
+    
+    # 1. Parse top primers (entry = 1) from krait-ssr-primers
+    primer_info = {}
+    if os.path.exists(krait_primers_path):
+        with open(krait_primers_path, 'r', encoding='utf-8', errors='ignore') as f:
+            for line in f:
+                parts = line.strip().split('\t')
+                if len(parts) >= 12:
+                    target = parts[1] # e.g. ssr-1-1
+                    entry = parts[2]
+                    if entry == '1':
+                        row_id = target.split('-')[-1]
+                        primer_info[row_id] = {
+                            'prod_size': int(parts[3]) if parts[3].isdigit() else 0,
+                            'tm_f': float(parts[4]) if parts[4].replace('.','',1).isdigit() else 60.0,
+                            'gc1': float(parts[5]) if parts[5].replace('.','',1).isdigit() else 50.0,
+                            'f_seq': parts[7],
+                            'tm_r': float(parts[8]) if parts[8].replace('.','',1).isdigit() else 60.0,
+                            'gc2': float(parts[9]) if parts[9].replace('.','',1).isdigit() else 50.0,
+                            'r_seq': parts[11]
+                        }
+        print(f"[+] Loaded {len(primer_info):,} Krait primer pairs (entry=1).")
+
+    # 2. Motif type mapping (1..6 -> Mononucleotide..Hexanucleotide)
+    type_map = {
+        '1': 'Mononucleotide',
+        '2': 'Dinucleotide',
+        '3': 'Trinucleotide',
+        '4': 'Tetranucleotide',
+        '5': 'Pentanucleotide',
+        '6': 'Hexanucleotide'
+    }
+
+    ssr_gff_lines = ["##gff-version 3\n"]
+    parsed_ssrs_db = []
+    genic_ssr_count = 0
+    region_counts = defaultdict(int)
+
+    if os.path.exists(krait_ssr_path):
+        with open(krait_ssr_path, 'r', encoding='utf-8', errors='ignore') as f:
+            for line in f:
+                parts = line.strip().split('\t')
+                if len(parts) >= 9:
+                    row_id = parts[0]
+                    old_scaf = parts[1].strip()
+                    new_scaf = contig_map.get(old_scaf, old_scaf)
+                    start = int(parts[2])
+                    end = int(parts[3])
+                    motif = parts[4].strip()
+                    comp = parts[5].strip()
+                    raw_type = parts[6].strip()
+                    stype = type_map.get(raw_type, f"Type_{raw_type}")
+                    repeat_cnt = int(parts[7])
+                    length = int(parts[8])
+
+                    new_sid = f"CcSSR_{int(row_id):06d}"
+
+                    # Precise Genomic Region Intersection (CDS vs Exon/UTR vs Intron vs Intergenic)
+                    matched_gene_id = "Intergenic"
+                    location_type = "Intergenic"
+                    found_loc = False
+
+                    # 1. Check CDS
+                    if new_scaf in cds_tree_by_contig:
+                        for c_st, c_en, gid in cds_tree_by_contig[new_scaf]:
+                            if start <= c_en and end >= c_st:
+                                matched_gene_id = gid
+                                location_type = "Coding (CDS)"
+                                found_loc = True
+                                genic_ssr_count += 1
+                                break
+
+                    # 2. Check Exon/UTR
+                    if not found_loc and new_scaf in exon_tree_by_contig:
+                        for e_st, e_en, gid in exon_tree_by_contig[new_scaf]:
+                            if start <= e_en and end >= e_st:
+                                matched_gene_id = gid
+                                location_type = "Non-coding (Exon/UTR)"
+                                found_loc = True
+                                genic_ssr_count += 1
+                                break
+
+                    # 3. Check Gene/Intron
+                    if not found_loc and new_scaf in gene_tree_by_contig:
+                        for g_st, g_en, gid in gene_tree_by_contig[new_scaf]:
+                            if start <= g_en and end >= g_st:
+                                matched_gene_id = gid
+                                location_type = "Non-coding (Intron)"
+                                found_loc = True
+                                genic_ssr_count += 1
+                                break
+
+                    region_counts[location_type] += 1
+
+                    p = primer_info.get(row_id, {
+                        'f_seq': 'N/A',
+                        'r_seq': 'N/A',
+                        'tm_f': 0.0,
+                        'tm_r': 0.0,
+                        'prod_size': 0
+                    })
+
+                    attrs = f"ID={new_sid};Name={motif};original_id={row_id};ssr_type={stype};gene_id={matched_gene_id};location={location_type};product_size={p['prod_size']}bp;primer_forward={p['f_seq']};primer_reverse={p['r_seq']}"
+                    ssr_gff_lines.append(f"{new_scaf}\tKrait\tmicrosatellite\t{start}\t{end}\t.\t+\t.\t{attrs}\n")
+
+                    parsed_ssrs_db.append({
+                        'ssr_id': new_sid,
+                        'original_id': row_id,
+                        'contig': new_scaf,
+                        'ssr_type': stype,
+                        'motif': motif,
+                        'repeat_count': repeat_cnt,
+                        'start': start,
+                        'end': end,
+                        'length': length,
+                        'gene_id': matched_gene_id,
+                        'ssr_location': location_type,
+                        'primer_forward': p['f_seq'],
+                        'primer_reverse': p['r_seq'],
+                        'tm_f': p['tm_f'],
+                        'tm_r': p['tm_r'],
+                        'product_size': p['prod_size']
+                    })
+
+    write_sort_tabix_gff(ssr_gff_lines, os.path.join(db_dir, 'cumin_ssrs'))
+    print(f"[+] Processed {len(parsed_ssrs_db):,} SSRs: {genic_ssr_count:,} Genic ({genic_ssr_count/max(1,len(parsed_ssrs_db))*100:.1f}%) and {len(parsed_ssrs_db)-genic_ssr_count:,} Genomic.")
+
+    # ----------------------------------------------------
+    # STEP 6: PROCESS miRNA TARGETS WITH GENOMIC INTERSECTION
+    # ----------------------------------------------------
+    print("\n[*] Step 6: Intersecting miRNA Targets with Genomic Coordinates & Building Track...")
+    
+    # Load miRBase Accession mappings from mature.fa and hairpin.fa
+    mature_map = {}
+    hairpin_map = {}
+
+    mature_fa = os.path.join(base_dir, 'mature.fa')
+    if os.path.exists(mature_fa):
+        with open(mature_fa, 'r', encoding='utf-8', errors='ignore') as f:
+            for line in f:
+                if line.startswith('>'):
+                    parts = line[1:].strip().split()
+                    if len(parts) >= 2:
+                        seq_id = parts[0]
+                        acc = parts[1]
+                        mature_map[seq_id.lower()] = acc
+                        base_id = re.sub(r'-[35]p$', '', seq_id, flags=re.IGNORECASE)
+                        if base_id.lower() not in mature_map:
+                            mature_map[base_id.lower()] = acc
+
+    hairpin_fa = os.path.join(base_dir, 'hairpin.fa')
+    if os.path.exists(hairpin_fa):
+        with open(hairpin_fa, 'r', encoding='utf-8', errors='ignore') as f:
+            for line in f:
+                if line.startswith('>'):
+                    parts = line[1:].strip().split()
+                    if len(parts) >= 2:
+                        seq_id = parts[0]
+                        acc = parts[1]
+                        hairpin_map[seq_id.lower()] = acc
+
+    def get_mirbase_accession(acc):
+        clean = acc.strip()
+        candidates = [
+            clean,
+            re.sub(r'\.\d+$', '', clean),
+            re.sub(r'-[35]p$', '', clean, flags=re.IGNORECASE),
+            re.sub(r'-[35]p$', '', re.sub(r'\.\d+$', '', clean), flags=re.IGNORECASE),
+            re.sub(r'miR', 'MIR', clean, flags=re.IGNORECASE),
+            re.sub(r'MIR', 'miR', clean, flags=re.IGNORECASE),
+            re.sub(r'-[35]p$', '', re.sub(r'miR', 'MIR', clean, flags=re.IGNORECASE), flags=re.IGNORECASE),
+            re.sub(r'-[35]p$', '', re.sub(r'MIR', 'miR', clean, flags=re.IGNORECASE), flags=re.IGNORECASE)
+        ]
+        for cand in candidates:
+            low = cand.lower()
+            if low in mature_map:
+                return mature_map[low]
+            if low in hairpin_map:
+                return hairpin_map[low]
+        return None
+
+    psrna_path = os.path.join(base_dir, 'psRNATargetJob-1785848631371569.txt')
+    mirna_gff_lines = ["##gff-version 3\n"]
+    parsed_mirna_db = []
+
+    if os.path.exists(psrna_path):
+        with open(psrna_path, 'r', encoding='utf-8', errors='ignore') as f:
+            for line in f:
+                if line.startswith('#') or line.startswith('miRNA_Acc') or not line.strip(): continue
+                parts = line.strip().split('\t')
+                if len(parts) >= 11:
+                    mirna_acc = parts[0].strip()
+                    target_gid_old = parts[1].strip()
+                    target_gid_new = gene_map.get(target_gid_old, target_gid_old)
+                    
+                    try:
+                        expect = float(parts[2].strip())
+                    except ValueError:
+                        expect = 3.0
+
+                    try:
+                        upe = float(parts[3].strip())
+                    except ValueError:
+                        upe = -1.0
+
+                    m_start = int(parts[4]) if parts[4].isdigit() else 1
+                    m_end = int(parts[5]) if parts[5].isdigit() else 20
+                    t_start = int(parts[6]) if parts[6].isdigit() else 1
+                    t_end = int(parts[7]) if parts[7].isdigit() else 20
+                    
+                    mirna_seq = parts[8].strip()
+                    target_seq = parts[9].strip()
+                    inhibition = parts[10].strip()
+                    target_desc = parts[11].strip() if len(parts) > 11 else f"Target site on {target_gid_new}"
+
+                    maccession = get_mirbase_accession(mirna_acc)
+                    if maccession:
+                        mb_id = maccession
+                        mb_url = f"https://www.mirbase.org/hairpin/{maccession}"
+                    else:
+                        mb_id = mirna_acc
+                        mb_url = f"https://www.mirbase.org/textsearch.shtml?q={mirna_acc}"
+                    
+                    genomic_start = 0
+                    genomic_end = 0
+                    if target_gid_new in gene_coords_map:
+                        scaf, g_start, g_end, strand = gene_coords_map[target_gid_new]
+                        if strand == '+':
+                            genomic_start = g_start + t_start - 1
+                            genomic_end = g_start + t_end - 1
+                        else:
+                            genomic_start = g_end - t_end + 1
+                            genomic_end = g_end - t_start + 1
+                            
+                        s_min = min(genomic_start, genomic_end)
+                        e_max = max(genomic_start, genomic_end)
+                        genomic_start = s_min
+                        genomic_end = e_max
+                        attrs = f"ID={mirna_acc}_{target_gid_new};Name={mirna_acc};mirbase_id={mb_id};target={target_gid_new};expectation={expect};inhibition={inhibition}"
+                        mirna_gff_lines.append(f"{scaf}\tpsRNATarget\tmiRNA_target_site\t{s_min}\t{e_max}\t.\t{strand}\t.\t{attrs}\n")
+                    
+                    parsed_mirna_db.append({
+                        'mirna_acc': mirna_acc,
+                        'mirbase_id': mb_id,
+                        'target_gene': target_gid_new,
+                        'expectation': expect,
+                        'upe': upe,
+                        'mirna_start': m_start,
+                        'mirna_end': m_end,
+                        'target_start': t_start,
+                        'target_end': t_end,
+                        'mirna_aligned': mirna_seq,
+                        'target_aligned': target_seq,
+                        'genomic_start': genomic_start,
+                        'genomic_end': genomic_end,
+                        'inhibition': inhibition,
+                        'target_desc': target_desc,
+                        'mirbase_url': mb_url
+                    })
+
+    write_sort_tabix_gff(mirna_gff_lines, os.path.join(db_dir, 'cumin_mirna'))
+    print(f"[+] Genomically intersected {len(parsed_mirna_db):,} miRNA target interactions.")
+
+    # ----------------------------------------------------
+    # STEP 7: PROCESS SECONDARY METABOLITES TRACK
+    # ----------------------------------------------------
+    print("\n[*] Step 7: Intersecting Secondary Metabolite Biosynthetic Genes & Building Track...")
+    sec_metab_csv = os.path.join(base_dir, 'secondary_metabolites.csv')
+    sec_gff_lines = ["##gff-version 3\n"]
+    parsed_sec_db = []
+
+    if os.path.exists(sec_metab_csv):
+        df_sec = pd.read_csv(sec_metab_csv)
+        for _, r in df_sec.iterrows():
+            old_gid = str(r['Gene_ID']).strip()
+            new_gid = gene_map.get(old_gid, old_gid)
+            cat = str(r['Metabolite_Category']).strip()
+            desc = str(r['Description']).strip()
+            sp = str(r.get('SwissProt_Hit', '')).strip()
+            nr = str(r.get('NR_Hit', '')).strip()
+            gos = str(r.get('GOs', '')).strip()
+            kegg = str(r.get('KEGG_Pathway', '')).strip()
+
+            if new_gid in gene_coords_map:
+                scaf, g_start, g_end, strand = gene_coords_map[new_gid]
+                attrs = f"ID={new_gid};Name={cat};category={cat};description={desc}"
+                sec_gff_lines.append(f"{scaf}\tSecondaryMetabolites\tsecondary_metabolite_gene\t{g_start}\t{g_end}\t.\t{strand}\t.\t{attrs}\n")
+
+                parsed_sec_db.append({
+                    'gene_id': new_gid,
+                    'contig': scaf,
+                    'start': g_start,
+                    'end': g_end,
+                    'strand': strand,
+                    'metabolite_category': cat,
+                    'description': desc,
+                    'swissprot_hit': sp,
+                    'nr_hit': nr,
+                    'gos': gos,
+                    'kegg_pathway': kegg
+                })
+
+    write_sort_tabix_gff(sec_gff_lines, os.path.join(db_dir, 'cumin_sec_metabolites'))
+    print(f"[+] Loaded {len(parsed_sec_db):,} secondary metabolite pathways into track.")
+
+    # ----------------------------------------------------
+    # STEP 8: BUILD COMPREHENSIVE SQLITE DATABASE
+    # ----------------------------------------------------
+    print("\n[*] Step 8: Building Indexed SQLite Relational Database...")
+    db_sqlite_path = os.path.join(db_dir, 'cumin_database.sqlite')
+    if os.path.exists(db_sqlite_path):
+        os.remove(db_sqlite_path)
+
+    conn = sqlite3.connect(db_sqlite_path)
+    cur = conn.cursor()
+    cur.execute("PRAGMA synchronous = OFF;")
+    cur.execute("PRAGMA journal_mode = MEMORY;")
+
+    # Table 1: genes
+    cur.execute("""
+    CREATE TABLE genes (
+        gene_id TEXT PRIMARY KEY,
+        contig TEXT,
+        start INTEGER,
+        end INTEGER,
+        length INTEGER,
+        strand TEXT,
+        description TEXT,
+        go_terms TEXT,
+        go_ids TEXT,
+        ec_code TEXT,
+        ec_name TEXT,
+        interpro_go_ids TEXT,
+        interpro_go_terms TEXT,
+        interpro_name TEXT,
+        interpro_signatures TEXT,
+        kegg_pathway TEXT,
+        nr_hit TEXT,
+        swissprot_hit TEXT
+    )
+    """)
+    gene_tuples = [(g['gene_id'], g['contig'], g['start'], g['end'], g['length'], g['strand'],
+                    g['description'], g['go_terms'], g['go_ids'], g['ec_code'], g['ec_name'],
+                    g['interpro_go_ids'], g['interpro_go_terms'], g['interpro_name'], g['interpro_signatures'],
+                    g['kegg_pathway'], g['nr_hit'], g['swissprot_hit']) for g in parsed_genes_db]
+    cur.executemany("INSERT INTO genes VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", gene_tuples)
+
+    # Table 2: ssrs (Enriched with gene_id and ssr_location!)
+    cur.execute("""
+    CREATE TABLE ssrs (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        ssr_id TEXT,
+        original_id TEXT,
+        contig TEXT,
+        ssr_type TEXT,
+        motif TEXT,
+        repeat_count INTEGER,
+        start INTEGER,
+        end INTEGER,
+        length INTEGER,
+        gene_id TEXT,
+        ssr_location TEXT,
+        primer_forward TEXT,
+        primer_reverse TEXT,
+        tm_f REAL,
+        tm_r REAL,
+        product_size INTEGER
+    )
+    """)
+    ssr_tuples = [(s['ssr_id'], s['original_id'], s['contig'], s['ssr_type'], s['motif'], s['repeat_count'], s['start'], s['end'], s['length'], s['gene_id'], s['ssr_location'], s['primer_forward'], s['primer_reverse'], s['tm_f'], s['tm_r'], s['product_size']) for s in parsed_ssrs_db]
+    cur.executemany("INSERT INTO ssrs (ssr_id, original_id, contig, ssr_type, motif, repeat_count, start, end, length, gene_id, ssr_location, primer_forward, primer_reverse, tm_f, tm_r, product_size) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", ssr_tuples)
+
+    # Table 3: transcription_factors
+    tf_txt = os.path.join(base_dir, 'PlantTFDB.txt')
+    if not os.path.exists(tf_txt):
+        tf_txt = os.path.join(base_dir, 'planttfdb.txt')
+    if not os.path.exists(tf_txt):
+        tf_txt = os.path.join(base_dir, 'TF_and_best1_in_Ath.list.txt')
+    cur.execute("""
+    CREATE TABLE transcription_factors (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        gene_id TEXT,
+        tf_family TEXT,
+        ath_hit TEXT,
+        ath_locus TEXT,
+        evalue TEXT,
+        description TEXT,
+        tair_url TEXT
+    )
+    """)
+    tf_tuples = []
+    if os.path.exists(tf_txt):
+        with open(tf_txt, 'r', encoding='utf-8', errors='ignore') as f:
+            for line in f:
+                if line.startswith('#') or not line.strip(): continue
+                parts = line.strip().split('\t')
+                if len(parts) >= 2:
+                    family = parts[1].strip()
+                    if family.startswith('CcGene'):
+                        continue
+                    old_gid = parts[0].strip()
+                    old_gid_clean = re.sub(r'_\d+$', '', old_gid)
+                    new_gid = gene_map.get(old_gid_clean, old_gid_clean)
+                    ath = parts[2].strip() if len(parts) > 2 else '-'
+                    evalue = parts[3].strip() if len(parts) > 3 else '-'
+                    desc = parts[4].strip() if len(parts) > 4 else f"{family} family transcription factor"
+                    locus = ath.split('.')[0] if (ath != '-' and '.' in ath) else (ath if ath != '-' else '-')
+                    tair_url = f"https://www.arabidopsis.org/servlets/Search?type=general&search_action=detail&method=1&sub_type=gene&name={locus}" if locus != '-' else '-'
+                    tf_tuples.append((new_gid, family, ath, locus, evalue, desc, tair_url))
+    cur.executemany("INSERT INTO transcription_factors (gene_id, tf_family, ath_hit, ath_locus, evalue, description, tair_url) VALUES (?,?,?,?,?,?,?)", tf_tuples)
+
+    # Table 4: mirna_targets
+    cur.execute("""
+    CREATE TABLE mirna_targets (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        mirna_acc TEXT,
+        mirbase_id TEXT,
+        target_gene TEXT,
+        expectation REAL,
+        upe REAL,
+        mirna_start INTEGER,
+        mirna_end INTEGER,
+        target_start INTEGER,
+        target_end INTEGER,
+        mirna_aligned TEXT,
+        target_aligned TEXT,
+        genomic_start INTEGER,
+        genomic_end INTEGER,
+        inhibition TEXT,
+        target_desc TEXT,
+        mirbase_url TEXT
+    )
+    """)
+    mirna_tuples = [
+        (
+            m['mirna_acc'], m['mirbase_id'], m['target_gene'], m['expectation'], m['upe'],
+            m['mirna_start'], m['mirna_end'], m['target_start'], m['target_end'],
+            m['mirna_aligned'], m['target_aligned'], m['genomic_start'], m['genomic_end'],
+            m['inhibition'], m['target_desc'], m['mirbase_url']
+        ) for m in parsed_mirna_db
+    ]
+    cur.executemany("""
+        INSERT INTO mirna_targets (
+            mirna_acc, mirbase_id, target_gene, expectation, upe,
+            mirna_start, mirna_end, target_start, target_end,
+            mirna_aligned, target_aligned, genomic_start, genomic_end,
+            inhibition, target_desc, mirbase_url
+        ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+    """, mirna_tuples)
+
+    # Table 5: secondary_metabolites
+    cur.execute("""
+    CREATE TABLE secondary_metabolites (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        gene_id TEXT,
+        contig TEXT,
+        start INTEGER,
+        end INTEGER,
+        strand TEXT,
+        metabolite_category TEXT,
+        description TEXT,
+        swissprot_hit TEXT,
+        nr_hit TEXT,
+        gos TEXT,
+        kegg_pathway TEXT
+    )
+    """)
+    sec_tuples = [(sec['gene_id'], sec['contig'], sec['start'], sec['end'], sec['strand'], sec['metabolite_category'], sec['description'], sec['swissprot_hit'], sec['nr_hit'], sec['gos'], sec['kegg_pathway']) for sec in parsed_sec_db]
+    cur.executemany("INSERT INTO secondary_metabolites (gene_id, contig, start, end, strand, metabolite_category, description, swissprot_hit, nr_hit, gos, kegg_pathway) VALUES (?,?,?,?,?,?,?,?,?,?,?)", sec_tuples)
+
+    # Create Indexes
+    cur.execute("CREATE INDEX idx_genes_contig ON genes(contig)")
+    cur.execute("CREATE INDEX idx_ssrs_contig ON ssrs(contig)")
+    cur.execute("CREATE INDEX idx_ssrs_type ON ssrs(ssr_type)")
+    cur.execute("CREATE INDEX idx_ssrs_gene ON ssrs(gene_id)")
+    cur.execute("CREATE INDEX idx_ssrs_loc ON ssrs(ssr_location)")
+    cur.execute("CREATE INDEX idx_tf_family ON transcription_factors(tf_family)")
+    cur.execute("CREATE INDEX idx_mirna_target ON mirna_targets(target_gene)")
+    cur.execute("CREATE INDEX idx_sec_cat ON secondary_metabolites(metabolite_category)")
+
+    conn.commit()
+    conn.close()
+    print(f"[✓] Relational database built and indexed: {db_sqlite_path}")
+
+    # ----------------------------------------------------
+    # STEP 9: GENERATE PRODUCTION JBROWSE 2 CONFIG
+    # ----------------------------------------------------
+    print("\n[*] Step 9: Generating JBrowse 2 Multi-Track Config...")
+    config = {
+        "assembly": {
+            "name": "Cuminum_cyminum",
+            "sequence": {
+                "type": "ReferenceSequenceTrack",
+                "trackId": "Cuminum_cyminum_sequence",
+                "adapter": {
+                    "type": "IndexedFastaAdapter",
+                    "fastaLocation": { "uri": "/cumin_ncbi_renamed.fsa" },
+                    "faiLocation": { "uri": "/cumin_ncbi_renamed.fsa.fai" }
+                }
+            }
+        },
+        "tracks": [
+            {
+                "type": "FeatureTrack",
+                "trackId": "cumin_gene_models",
+                "name": "Gene Models & Annotations (GFF3)",
+                "assemblyNames": ["Cuminum_cyminum"],
+                "adapter": {
+                    "type": "Gff3TabixAdapter",
+                    "gffGzLocation": { "uri": "/db/cumin_genes.gff.gz" },
+                    "index": { "location": { "uri": "/db/cumin_genes.gff.gz.tbi" } }
+                }
+            },
+            {
+                "type": "FeatureTrack",
+                "trackId": "cumin_repeats",
+                "name": "EDTA Repeatmasking Results (GFF3)",
+                "assemblyNames": ["Cuminum_cyminum"],
+                "adapter": {
+                    "type": "Gff3TabixAdapter",
+                    "gffGzLocation": { "uri": "/db/cumin_repeats.gff.gz" },
+                    "index": { "location": { "uri": "/db/cumin_repeats.gff.gz.tbi" } }
+                }
+            },
+            {
+                "type": "FeatureTrack",
+                "trackId": "cumin_ssrs",
+                "name": "SSR Markers & Primers (GFF3)",
+                "assemblyNames": ["Cuminum_cyminum"],
+                "adapter": {
+                    "type": "Gff3TabixAdapter",
+                    "gffGzLocation": { "uri": "/db/cumin_ssrs.gff.gz" },
+                    "index": { "location": { "uri": "/db/cumin_ssrs.gff.gz.tbi" } }
+                }
+            },
+            {
+                "type": "FeatureTrack",
+                "trackId": "cumin_mirna",
+                "name": "miRNA Target Interactions (GFF3)",
+                "assemblyNames": ["Cuminum_cyminum"],
+                "adapter": {
+                    "type": "Gff3TabixAdapter",
+                    "gffGzLocation": { "uri": "/db/cumin_mirna.gff.gz" },
+                    "index": { "location": { "uri": "/db/cumin_mirna.gff.gz.tbi" } }
+                }
+            },
+            {
+                "type": "FeatureTrack",
+                "trackId": "cumin_sec_metabolites",
+                "name": "Secondary Metabolite Pathways (GFF3)",
+                "assemblyNames": ["Cuminum_cyminum"],
+                "adapter": {
+                    "type": "Gff3TabixAdapter",
+                    "gffGzLocation": { "uri": "/db/cumin_sec_metabolites.gff.gz" },
+                    "index": { "location": { "uri": "/db/cumin_sec_metabolites.gff.gz.tbi" } }
+                }
+            }
+        ],
+        "defaultSession": {
+            "name": "CuminGRdb Default Multi-Track Session",
+            "views": [
+                {
+                    "id": "linear_genome_view",
+                    "type": "LinearGenomeView",
+                    "tracks": [
+                        { "id": "cumin_gene_models", "type": "FeatureTrack", "displays": [{ "id": "cumin_gene_models-LinearBasicDisplay", "type": "LinearBasicDisplay" }] },
+                        { "id": "cumin_repeats", "type": "FeatureTrack", "displays": [{ "id": "cumin_repeats-LinearBasicDisplay", "type": "LinearBasicDisplay" }] },
+                        { "id": "cumin_ssrs", "type": "FeatureTrack", "displays": [{ "id": "cumin_ssrs-LinearBasicDisplay", "type": "LinearBasicDisplay" }] },
+                        { "id": "cumin_mirna", "type": "FeatureTrack", "displays": [{ "id": "cumin_mirna-LinearBasicDisplay", "type": "LinearBasicDisplay" }] },
+                        { "id": "cumin_sec_metabolites", "type": "FeatureTrack", "displays": [{ "id": "cumin_sec_metabolites-LinearBasicDisplay", "type": "LinearBasicDisplay" }] }
+                    ]
+                }
+            ]
+        }
+    }
+    
+    jbrowse_dir = os.path.join(base_dir, 'jbrowse2')
+    os.makedirs(jbrowse_dir, exist_ok=True)
+    with open(os.path.join(jbrowse_dir, 'config.json'), 'w', encoding='utf-8') as f:
+        json.dump(config, f, indent=2)
+
+    print("\n[★] Master CuminGRdb Build Complete!")
+
+if __name__ == '__main__':
+    main()

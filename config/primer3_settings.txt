@@ -1,0 +1,20 @@
+# ==============================================================================
+# Project: CuminGRdb (Cuminum cyminum L. Genome Project)
+# Configuration: Primer3 PCR Primer Design Parameters
+# Author: Dr. Ajay Kumar Mahato (BRIC-CDFD)
+# ==============================================================================
+
+PRIMER_OPT_SIZE=20
+PRIMER_MIN_SIZE=18
+PRIMER_MAX_SIZE=25
+
+PRIMER_OPT_TM=60.0
+PRIMER_MIN_TM=57.0
+PRIMER_MAX_TM=63.0
+
+PRIMER_MIN_GC=40.0
+PRIMER_MAX_GC=60.0
+
+PRIMER_PRODUCT_SIZE_RANGE=100-300
+PRIMER_NUM_RETURN=3
+PRIMER_EXPLAIN_FLAG=1

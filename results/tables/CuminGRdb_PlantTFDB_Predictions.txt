@@ -1,0 +1,1362 @@
+CcGene_04315_1	RAV	AT1G13260.1	1E-132	related to ABI3/VP1 1
+CcGene_00017_1	E2F/DP	AT3G48160.1	7E-49	DP-E2F-like 1
+CcGene_00020_1	NF-X1	AT5G05660.1	0	sequence-specific DNA binding transcription factors;zinc ion binding;sequence-specific DNA binding transcription factors
+CcGene_00050_1	FAR1	AT4G15090.1	0	FAR1 family protein
+CcGene_00073_1	NAC	AT1G26870.1	1E-101	NAC family protein
+CcGene_00181_1	bHLH	AT1G09530.2	7E-63	phytochrome interacting factor 3
+CcGene_00185_1	NF-YA	AT5G12840.2	8E-64	nuclear factor Y, subunit A1
+CcGene_00219_1	FAR1	AT1G10240.1	2E-10	FAR1-related sequence 11
+CcGene_00365_1	SBP	AT5G50670.1	3E-61	SBP family protein
+CcGene_00373_1	bHLH	AT4G00870.1	0.000006	bHLH family protein
+CcGene_00377_1	LBD	AT2G42430.1	4E-71	lateral organ boundaries-domain 16
+CcGene_00530_1	Trihelix	AT1G76880.1	1E-141	Trihelix family protein
+CcGene_00581_1	Trihelix	AT2G38250.1	7E-49	Trihelix family protein
+CcGene_00629_1	LBD	AT4G37540.1	9E-77	LOB domain-containing protein 39
+CcGene_00695_1	bZIP	AT2G40950.1	1E-136	bZIP family protein
+CcGene_00715_1	bZIP	AT1G19490.1	1E-19	bZIP family protein
+CcGene_00741_1	WRKY	AT5G49520.1	3E-46	WRKY DNA-binding protein 48
+CcGene_00742_1	NF-YC	AT1G07980.1	8E-27	nuclear factor Y, subunit C10
+CcGene_00786_1	WRKY	AT2G34830.1	2E-73	WRKY DNA-binding protein 35
+CcGene_00884_1	NAC	AT1G61110.1	3E-78	NAC domain containing protein 25
+CcGene_00888_1	NF-YC	AT3G12480.1	6E-72	nuclear factor Y, subunit C11
+CcGene_00950_1	Dof	AT4G24060.1	7E-44	Dof family protein
+CcGene_00973_1	HSF	AT1G67970.1	9E-87	heat shock transcription factor A8
+CcGene_01124_1	WRKY	AT2G30590.1	1E-118	WRKY DNA-binding protein 21
+CcGene_01192_1	bZIP	AT4G36730.1	8E-78	G-box binding factor 1
+CcGene_01200_1	WRKY	AT3G56400.1	3E-35	WRKY DNA-binding protein 70
+CcGene_01230_1	bZIP	AT1G06070.1	1E-155	bZIP family protein
+CcGene_01247_1	SBP	AT3G60030.1	0	squamosa promoter-binding protein-like 12
+CcGene_01261_1	bHLH	AT4G02590.2	5E-70	bHLH family protein
+CcGene_01351_1	WRKY	AT4G24240.1	1E-87	WRKY DNA-binding protein 7
+CcGene_01379_1	NAC	AT4G29230.1	4E-53	NAC domain containing protein 75
+CcGene_01386_1	GeBP	AT1G61730.1	0.000000001	DNA-binding storekeeper protein-related transcriptional regulator
+CcGene_01437_1	YABBY	AT2G45190.1	5E-82	YABBY family protein
+CcGene_01491_1	Nin-like	AT1G64530.1	1E-150	Nin-like family protein
+CcGene_01520_1	STAT	AT1G78540.1	0	SH2 domain protein B
+CcGene_01611_1	Nin-like	AT1G18790.1	1E-55	RWP-RK domain-containing protein
+CcGene_01615_1	bHLH	AT2G28160.1	3E-79	FER-like regulator of iron uptake
+CcGene_01730_1	GRAS	AT4G17230.1	0	SCARECROW-like 13
+CcGene_01778_1	WRKY	AT1G29280.1	3E-51	WRKY DNA-binding protein 65
+CcGene_01783_1	WRKY	AT4G01250.1	3E-75	WRKY family protein
+CcGene_01794_1	bHLH	AT4G37850.1	1E-60	bHLH family protein
+CcGene_01867_1	NAC	AT3G04070.2	4E-42	NAC domain containing protein 47
+CcGene_01872_1	bHLH	AT3G47640.2	1E-37	bHLH family protein
+CcGene_01887_1	LBD	AT3G49940.1	3E-68	LOB domain-containing protein 38
+CcGene_01946_1	NAC	AT1G56010.2	6E-76	NAC domain containing protein 1
+CcGene_02305_1	SRS	AT3G51060.1	1E-62	Lateral root primordium (LRP) protein-related
+CcGene_02333_1	GeBP	AT1G11510.1	6E-17	DNA-binding storekeeper protein-related transcriptional regulator
+CcGene_02368_1	NF-YC	AT1G56170.1	3E-40	nuclear factor Y, subunit C2
+CcGene_02465_1	SRS	AT3G51060.1	9E-73	Lateral root primordium (LRP) protein-related
+CcGene_02467_1	E2F/DP	AT5G03415.1	1E-105	Transcription factor DP
+CcGene_02476_1	NAC	AT5G18270.1	2E-62	Arabidopsis NAC domain containing protein 87
+CcGene_02495_1	VOZ	AT1G28520.2	0	vascular plant one zinc finger protein
+CcGene_02509_1	HSF	AT3G24520.1	2E-89	heat shock transcription factor C1
+CcGene_02587_1	bZIP	AT1G45249.1	1E-117	abscisic acid responsive elements-binding factor 2
+CcGene_02599_1	Trihelix	AT2G35640.1	3E-80	Trihelix family protein
+CcGene_02677_1	GATA	AT3G24050.1	8E-47	GATA transcription factor 1
+CcGene_02687_1	bZIP	AT1G43700.1	2E-80	VIRE2-interacting protein 1
+CcGene_02690_1	NAC	AT5G04410.1	1E-146	NAC domain containing protein 2
+CcGene_02691_1	NAC	AT3G10490.2	1E-38	NAC domain containing protein 52
+CcGene_02729_1	WRKY	AT5G43290.1	2E-37	WRKY DNA-binding protein 49
+CcGene_03012_1	NAC	AT5G14000.1	2E-32	NAC domain containing protein 84
+CcGene_03031_1	BES1	AT1G78700.1	1E-116	BES1/BZR1 homolog 4
+CcGene_03188_1	SBP	AT5G50670.1	2E-34	SBP family protein
+CcGene_03194_1	WRKY	AT2G03340.1	1E-164	WRKY DNA-binding protein 3
+CcGene_03228_1	bHLH	AT4G00050.1	8E-38	bHLH family protein
+CcGene_03234_1	WRKY	AT5G15130.1	3E-80	WRKY DNA-binding protein 72
+CcGene_03240_1	FAR1	AT4G19990.2	0.00002	FAR1-related sequence 1
+CcGene_03413_1	bZIP	AT2G36270.1	2E-31	bZIP family protein
+CcGene_03466_1	bHLH	AT1G72210.1	2E-78	bHLH family protein
+CcGene_03537_1	FAR1	AT1G10240.1	1E-13	FAR1-related sequence 11
+CcGene_03591_1	NF-YC	AT1G56170.1	1E-15	nuclear factor Y, subunit C2
+CcGene_03626_1	Trihelix	AT2G35640.1	1E-59	Trihelix family protein
+CcGene_03754_1	SBP	AT1G20980.1	0	squamosa promoter binding protein-like 14
+CcGene_03784_1	SBP	AT1G27360.4	1E-39	squamosa promoter-like 11
+CcGene_03787_1	Dof	AT3G47500.1	8E-81	cycling DOF factor 3
+CcGene_03903_1	bHLH	AT2G42280.1	1E-70	bHLH family protein
+CcGene_03985_1	NAC	AT2G33480.1	0.000001	NAC domain containing protein 41
+CcGene_04137_1	NAC	AT2G02450.1	1E-108	NAC domain containing protein 35
+CcGene_04154_1	E2F/DP	AT1G47870.1	2E-80	E2F/DP family protein
+CcGene_04160_1	WRKY	AT4G24240.1	2E-89	WRKY DNA-binding protein 7
+CcGene_04208_1	bHLH	AT5G37800.1	4E-59	RHD SIX-LIKE 1
+CcGene_04225_1	NAC	AT4G27410.2	1E-128	NAC family protein
+CcGene_04226_1	NAC	AT3G15510.1	1E-109	NAC domain containing protein 2
+CcGene_04280_1	HSF	AT5G16820.2	1E-129	heat shock factor 3
+CcGene_04314_1	NAC	AT2G18060.1	1E-151	vascular related NAC-domain protein 1
+CcGene_04320_1	WRKY	AT3G58710.2	3E-38	WRKY DNA-binding protein 69
+CcGene_04321_1	WRKY	AT1G29280.1	9E-27	WRKY DNA-binding protein 65
+CcGene_04347_1	WRKY	AT1G29280.1	1E-72	WRKY DNA-binding protein 65
+CcGene_04358_1	BBR-BPC	AT5G42520.1	1E-146	basic pentacysteine 6
+CcGene_04386_1	bZIP	AT5G65210.2	1E-133	bZIP family protein
+CcGene_04389_1	GATA	AT5G49300.1	4E-32	GATA transcription factor 16
+CcGene_04422_1	WRKY	AT4G31550.1	3E-53	WRKY DNA-binding protein 11
+CcGene_04444_1	FAR1	AT4G15090.1	0.000002	FAR1 family protein
+CcGene_04458_1	bZIP	AT1G58110.1	1E-110	bZIP family protein
+CcGene_04519_1	NAC	AT5G07680.2	3E-12	NAC domain containing protein 80
+CcGene_04604_1	FAR1	AT4G38180.1	0	FAR1-related sequence 5
+CcGene_04719_1	Trihelix	AT5G01380.1	4E-65	Trihelix family protein
+CcGene_04746_1	CPP	AT3G22780.1	1E-131	Tesmin/TSO1-like CXC domain-containing protein
+CcGene_04753_1	Dof	AT5G02460.1	5E-51	Dof family protein
+CcGene_04817_1	E2F/DP	AT5G22220.2	3E-40	E2F transcription factor 1
+CcGene_04918_1	NAC	AT2G02450.1	3E-23	NAC domain containing protein 35
+CcGene_04924_1	NAC	AT5G13180.1	6E-64	NAC domain containing protein 83
+CcGene_04925_1	GeBP	AT1G61730.1	0.00000006	DNA-binding storekeeper protein-related transcriptional regulator
+CcGene_04952_1	GeBP	AT4G00390.1	5E-14	DNA-binding storekeeper protein-related transcriptional regulator
+CcGene_04972_1	FAR1	AT4G38180.1	1E-21	FAR1-related sequence 5
+CcGene_04990_1	bHLH	AT1G09530.2	0.000004	phytochrome interacting factor 3
+CcGene_05085_1	NAC	AT4G10350.1	6E-47	NAC domain containing protein 70
+CcGene_05337_1	bHLH	AT3G07340.1	2E-76	bHLH family protein
+CcGene_05575_1	NAC	AT4G28500.1	1E-109	NAC domain containing protein 73
+CcGene_05595_1	bZIP	AT1G43700.1	2E-72	VIRE2-interacting protein 1
+CcGene_05654_1	bHLH	AT2G31280.1	1E-123	conserved peptide upstream open reading frame 7
+CcGene_05689_1	NAC	AT1G52880.1	1E-16	NAC family protein
+CcGene_05700_1	WRKY	AT4G26640.2	1E-157	WRKY family protein
+CcGene_05769_1	NF-YB	AT5G23090.4	1E-92	nuclear factor Y, subunit B13
+CcGene_05800_1	BES1	AT3G50750.1	2E-16	BES1/BZR1 homolog 1
+CcGene_05809_1	LBD	AT4G00220.1	9E-81	LBD family protein
+CcGene_05901_1	WRKY	AT4G11070.1	3E-62	WRKY family protein
+CcGene_05916_1	VOZ	AT1G28520.2	3E-80	vascular plant one zinc finger protein
+CcGene_05996_1	HSF	AT2G26150.1	1E-115	heat shock transcription factor A2
+CcGene_06031_1	bZIP	AT3G62420.1	3E-59	basic region/leucine zipper motif 53
+CcGene_06063_1	FAR1	AT1G10240.1	0	FAR1-related sequence 11
+CcGene_06084_1	bZIP	AT1G68640.1	1E-168	bZIP family protein
+CcGene_06097_1	GeBP	AT1G11510.1	1E-17	DNA-binding storekeeper protein-related transcriptional regulator
+CcGene_06348_1	FAR1	AT1G10240.1	0.00000004	FAR1-related sequence 11
+CcGene_06392_1	LBD	AT1G06280.1	5E-41	LOB domain-containing protein 2
+CcGene_06414_1	HSF	AT5G62020.1	5E-40	heat shock transcription factor B2A
+CcGene_06476_1	GATA	AT4G32890.1	7E-38	GATA transcription factor 9
+CcGene_06498_1	FAR1	AT1G10240.1	0	FAR1-related sequence 11
+CcGene_06509_1	bHLH	AT1G61660.1	6E-51	bHLH family protein
+CcGene_06511_1	NAC	AT4G29230.1	0	NAC domain containing protein 75
+CcGene_06538_1	FAR1	AT4G38180.1	0.00000002	FAR1-related sequence 5
+CcGene_06576_1	bHLH	AT3G19860.1	7E-96	bHLH family protein
+CcGene_06613_1	FAR1	AT3G06250.1	0	FAR1-related sequence 7
+CcGene_06614_1	FAR1	AT3G06250.1	0	FAR1-related sequence 7
+CcGene_06748_1	FAR1	AT5G28530.1	0	FAR1-related sequence 10
+CcGene_06803_1	SBP	AT5G43270.1	6E-61	squamosa promoter binding protein-like 2
+CcGene_06813_1	LFY	AT5G61850.1	1E-148	floral meristem identity control protein LEAFY (LFY)
+CcGene_06844_1	Trihelix	AT3G10040.1	1E-106	sequence-specific DNA binding transcription factors
+CcGene_06949_1	Dof	AT4G24060.1	5E-44	Dof family protein
+CcGene_06971_1	BES1	AT1G75080.2	3E-90	BES1 family protein
+CcGene_06995_1	BES1	AT1G78700.1	1E-79	BES1/BZR1 homolog 4
+CcGene_07007_1	FAR1	AT4G19990.1	9E-15	FAR1-related sequence 1
+CcGene_07081_1	Trihelix	AT2G33550.1	1E-107	Trihelix family protein
+CcGene_07163_1	E2F/DP	AT5G03415.1	1E-159	Transcription factor DP
+CcGene_07181_1	bZIP	AT2G36270.1	1E-40	bZIP family protein
+CcGene_07197_1	bHLH	AT1G51140.1	7E-64	bHLH family protein
+CcGene_07200_1	GRAS	AT3G54220.1	3E-58	GRAS family protein
+CcGene_07211_1	bHLH	AT1G49770.1	8E-45	bHLH family protein
+CcGene_07245_1	WRKY	AT1G80840.1	4E-97	WRKY DNA-binding protein 40
+CcGene_07252_1	GATA	AT3G21175.2	2E-63	ZIM-like 1
+CcGene_07264_1	NAC	AT1G76420.1	4E-23	NAC family protein
+CcGene_07286_1	SBP	AT5G50670.1	3E-15	SBP family protein
+CcGene_07302_1	bHLH	AT2G42280.1	2E-50	bHLH family protein
+CcGene_07357_1	NAC	AT4G27410.2	1E-121	NAC family protein
+CcGene_07358_1	NAC	AT1G61110.1	1E-108	NAC domain containing protein 25
+CcGene_07380_1	SRS	AT3G51060.1	3E-63	Lateral root primordium (LRP) protein-related
+CcGene_07419_1	bHLH	AT1G61660.1	2E-54	bHLH family protein
+CcGene_07421_1	bHLH	AT4G21330.1	8E-34	bHLH family protein
+CcGene_07430_1	bZIP	AT5G11260.1	1E-58	bZIP family protein
+CcGene_07464_1	bHLH	AT5G08130.5	2E-87	bHLH family protein
+CcGene_07491_1	LBD	AT3G02550.1	5E-88	LOB domain-containing protein 41
+CcGene_07535_1	bZIP	AT2G35530.1	1E-157	basic region/leucine zipper transcription factor 16
+CcGene_07540_1	Dof	AT2G28510.1	1E-40	Dof family protein
+CcGene_07727_1	LBD	AT2G45410.1	2E-44	LOB domain-containing protein 19
+CcGene_07783_1	bHLH	AT2G42280.1	5E-60	bHLH family protein
+CcGene_07791_1	bZIP	AT2G40950.1	1E-172	bZIP family protein
+CcGene_07839_1	WRKY	AT4G11070.1	2E-58	WRKY family protein
+CcGene_07922_1	CPP	AT3G22780.1	1E-144	Tesmin/TSO1-like CXC domain-containing protein
+CcGene_07924_1	bZIP	AT4G38900.3	1E-165	bZIP family protein
+CcGene_07954_1	WRKY	AT3G56400.1	2E-45	WRKY DNA-binding protein 70
+CcGene_07990_1	bZIP	AT2G17770.2	3E-21	basic region/leucine zipper motif 27
+CcGene_08027_1	bHLH	AT3G56970.1	8E-51	bHLH family protein
+CcGene_08046_1	GATA	AT4G24470.2	1E-64	GATA-type zinc finger protein with TIFY domain
+CcGene_08052_1	bZIP	AT2G40620.1	1E-106	bZIP family protein
+CcGene_08053_1	LBD	AT2G40470.1	1E-68	LOB domain-containing protein 15
+CcGene_08061_1	bHLH	AT4G37850.1	1E-30	bHLH family protein
+CcGene_08071_1	Whirly	AT1G14410.1	1E-109	ssDNA-binding transcriptional regulator
+CcGene_08258_1	LBD	AT1G07900.1	3E-75	LOB domain-containing protein 1
+CcGene_08290_1	bHLH	AT2G24260.1	6E-84	LJRHL1-like 1
+CcGene_08349_1	bHLH	AT4G02590.2	1E-107	bHLH family protein
+CcGene_08353_1	bZIP	AT4G34000.1	2E-98	abscisic acid responsive elements-binding factor 3
+CcGene_08392_1	bZIP	AT1G06850.2	5E-42	basic leucine-zipper 52
+CcGene_08430_1	bHLH	AT4G20970.1	8E-33	bHLH family protein
+CcGene_08463_1	bZIP	AT5G65210.2	1E-160	bZIP family protein
+CcGene_08523_1	FAR1	AT2G27110.2	0	FAR1-related sequence 3
+CcGene_08535_1	bZIP	AT5G28770.2	9E-85	bZIP family protein
+CcGene_08554_1	NAC	AT1G12260.1	1E-132	NAC 007
+CcGene_08568_1	Trihelix	AT1G13450.1	1E-160	Trihelix family protein
+CcGene_08591_1	NF-YA	AT1G17590.2	2E-41	nuclear factor Y, subunit A8
+CcGene_08770_1	LBD	AT5G66870.1	6E-79	ASYMMETRIC LEAVES 2-like 1
+CcGene_08773_1	GeBP	AT1G61730.1	2E-17	DNA-binding storekeeper protein-related transcriptional regulator
+CcGene_08889_1	bZIP	AT3G58120.1	9E-81	bZIP family protein
+CcGene_08929_1	NAC	AT3G18400.1	7E-78	NAC domain containing protein 58
+CcGene_08936_1	Dof	AT2G37590.1	7E-50	DNA binding with one finger 2.4
+CcGene_08944_1	LBD	AT3G26660.1	3E-54	LOB domain-containing protein 24
+CcGene_09014_1	bZIP	AT5G65210.2	1E-165	bZIP family protein
+CcGene_09210_1	FAR1	AT1G10240.1	4E-10	FAR1-related sequence 11
+CcGene_09221_1	bHLH	AT1G72210.1	1E-79	bHLH family protein
+CcGene_09227_1	GeBP	AT1G61730.1	7E-17	DNA-binding storekeeper protein-related transcriptional regulator
+CcGene_09230_1	CAMTA	AT2G22300.2	0	signal responsive 1
+CcGene_09255_1	bHLH	AT4G00050.1	1E-63	bHLH family protein
+CcGene_09294_1	GATA	AT5G25830.1	3E-80	GATA transcription factor 12
+CcGene_09336_1	GRAS	AT1G66350.1	1E-80	RGA-like 1
+CcGene_09426_1	NF-YA	AT5G06510.2	3E-57	nuclear factor Y, subunit A10
+CcGene_09477_1	bHLH	AT3G57800.2	3E-96	bHLH family protein
+CcGene_09571_1	bZIP	AT1G03970.1	8E-46	G-box binding factor 4
+CcGene_09588_1	NAC	AT1G76420.1	1E-105	NAC family protein
+CcGene_09602_1	E2F/DP	AT2G36010.1	1E-126	E2F transcription factor 3
+CcGene_09613_1	LBD	AT5G66870.1	3E-70	ASYMMETRIC LEAVES 2-like 1
+CcGene_09637_1	NAC	AT1G25580.1	8E-70	NAC family protein
+CcGene_09638_1	NAC	AT5G14490.1	3E-51	NAC domain containing protein 85
+CcGene_09701_1	HSF	AT5G03720.1	4E-86	heat shock transcription factor A3
+CcGene_09720_1	NF-YA	AT1G72830.1	7E-38	nuclear factor Y, subunit A3
+CcGene_09864_1	WRKY	AT1G62300.1	1E-138	WRKY family protein
+CcGene_09908_1	NF-YB	AT2G47810.1	2E-47	nuclear factor Y, subunit B5
+CcGene_09994_1	bHLH	AT4G09820.1	4E-85	bHLH family protein
+CcGene_10066_1	NAC	AT3G04060.1	1E-108	NAC domain containing protein 46
+CcGene_10070_1	GATA	AT4G32890.1	2E-41	GATA transcription factor 9
+CcGene_10081_1	bHLH	AT1G10610.1	5E-63	bHLH family protein
+CcGene_10089_1	GATA	AT5G25830.1	1E-98	GATA transcription factor 12
+CcGene_10184_1	HSF	AT1G32330.1	2E-74	heat shock transcription factor A1D
+CcGene_10252_1	NAC	AT2G27300.1	1E-58	NTM1-like 8
+CcGene_10269_1	bHLH	AT1G68920.3	1E-115	bHLH family protein
+CcGene_10271_1	bZIP	AT4G38900.3	1E-147	bZIP family protein
+CcGene_10335_1	bZIP	AT3G30530.1	6E-33	basic leucine-zipper 42
+CcGene_10493_1	EIL	AT1G73730.1	1E-160	ETHYLENE-INSENSITIVE3-like 3
+CcGene_10521_1	bZIP	AT1G75390.1	4E-45	basic leucine-zipper 44
+CcGene_10588_1	bHLH	AT1G68810.1	9E-99	bHLH family protein
+CcGene_10602_1	bZIP	AT1G49720.1	2E-39	abscisic acid responsive element-binding factor 1
+CcGene_10612_1	FAR1	AT4G38180.1	1E-15	FAR1-related sequence 5
+CcGene_10641_1	bZIP	AT4G36730.2	2E-15	G-box binding factor 1
+CcGene_10733_1	bZIP	AT5G06950.4	1E-163	bZIP family protein
+CcGene_10794_1	bHLH	AT4G37850.1	7E-45	bHLH family protein
+CcGene_10804_1	FAR1	AT1G10240.1	1E-10	FAR1-related sequence 11
+CcGene_10883_1	Whirly	AT1G71260.1	5E-78	WHIRLY 2
+CcGene_10973_1	bHLH	AT4G34530.1	1E-62	cryptochrome-interacting basic-helix-loop-helix 1
+CcGene_10988_1	bHLH	AT2G14760.1	6E-53	bHLH family protein
+CcGene_10994_1	Dof	AT5G62940.1	4E-62	Dof family protein
+CcGene_11016_1	LBD	AT3G02550.1	4E-72	LOB domain-containing protein 41
+CcGene_11084_1	Dof	AT5G60200.1	3E-23	TARGET OF MONOPTEROS 6
+CcGene_11096_1	NAC	AT1G79580.1	2E-40	NAC family protein
+CcGene_11138_1	Nin-like	AT1G18790.1	1E-53	RWP-RK domain-containing protein
+CcGene_11168_1	FAR1	AT4G15090.1	0	FAR1 family protein
+CcGene_11172_1	YABBY	AT2G45190.1	1E-56	YABBY family protein
+CcGene_11177_1	SBP	AT3G57920.1	1E-57	squamosa promoter binding protein-like 15
+CcGene_11191_1	Trihelix	AT4G31270.1	3E-37	sequence-specific DNA binding transcription factors
+CcGene_11219_1	YABBY	AT2G45190.1	6E-91	YABBY family protein
+CcGene_11246_1	NAC	AT4G27410.2	0.0000002	NAC family protein
+CcGene_11342_1	GeBP	AT1G61730.1	3E-17	DNA-binding storekeeper protein-related transcriptional regulator
+CcGene_11354_1	NF-YC	AT1G56170.1	2E-12	nuclear factor Y, subunit C2
+CcGene_11402_1	bZIP	AT5G24800.1	8E-59	basic leucine zipper 9
+CcGene_11432_1	WRKY	AT1G62300.1	1E-142	WRKY family protein
+CcGene_11468_1	GATA	AT5G66320.2	3E-61	GATA transcription factor 5
+CcGene_11526_1	GATA	AT1G08010.2	3E-35	GATA transcription factor 11
+CcGene_11592_1	GATA	AT4G26150.1	3E-34	cytokinin-responsive gata factor 1
+CcGene_11596_1	HSF	AT2G26150.1	5E-57	heat shock transcription factor A2
+CcGene_11597_1	bHLH	AT5G56960.1	1E-63	bHLH family protein
+CcGene_11721_1	NF-YA	AT1G17590.2	2E-41	nuclear factor Y, subunit A8
+CcGene_11724_1	TCP	AT1G69690.1	2E-28	TCP family protein
+CcGene_11931_1	bHLH	AT2G16910.1	2E-68	bHLH family protein
+CcGene_11940_1	EIL	AT5G65100.1	1E-120	EIL family protein
+CcGene_11974_1	FAR1	AT4G38180.1	3E-16	FAR1-related sequence 5
+CcGene_12028_1	GRAS	AT1G14920.1	5E-68	GRAS family protein
+CcGene_12051_1	bZIP	AT5G24800.1	3E-69	basic leucine zipper 9
+CcGene_12142_1	E2F/DP	AT3G01330.1	6E-48	DP-E2F-like protein 3
+CcGene_12238_1	NAC	AT1G34190.1	1E-132	NAC domain containing protein 17
+CcGene_12257_1	GATA	AT4G17570.1	2E-17	GATA transcription factor 26
+CcGene_12324_1	FAR1	AT1G10240.1	1E-11	FAR1-related sequence 11
+CcGene_12364_1	FAR1	AT1G10240.1	0.0000008	FAR1-related sequence 11
+CcGene_12408_1	WRKY	AT2G04880.2	2E-76	zinc-dependent activator protein-1
+CcGene_12461_1	HSF	AT5G62020.1	8E-95	heat shock transcription factor B2A
+CcGene_12532_1	SBP	AT1G02065.1	8E-70	squamosa promoter binding protein-like 8
+CcGene_12566_1	Trihelix	AT5G03680.1	1E-143	Trihelix family protein
+CcGene_12661_1	LFY	AT5G61850.1	1E-151	floral meristem identity control protein LEAFY (LFY)
+CcGene_12670_1	FAR1	AT4G38180.1	0.00000001	FAR1-related sequence 5
+CcGene_12767_1	NAC	AT1G69490.1	8E-72	NAC-like, activated by AP3/PI
+CcGene_12771_1	GeBP	AT1G61730.1	2E-29	DNA-binding storekeeper protein-related transcriptional regulator
+CcGene_12791_1	bHLH	AT3G26744.1	1E-127	bHLH family protein
+CcGene_12797_1	Trihelix	AT1G76890.2	1E-114	Trihelix family protein
+CcGene_12813_1	SBP	AT5G50670.1	3E-45	SBP family protein
+CcGene_12825_1	NAC	AT2G02450.1	4E-98	NAC domain containing protein 35
+CcGene_12915_1	bHLH	AT1G22490.1	2E-69	bHLH family protein
+CcGene_12962_1	BBR-BPC	AT5G42520.2	2E-85	basic pentacysteine 6
+CcGene_12973_1	WRKY	AT1G29860.1	6E-27	WRKY DNA-binding protein 71
+CcGene_12976_1	NAC	AT4G17980.1	3E-55	NAC domain containing protein 71
+CcGene_12987_1	Nin-like	AT5G53040.1	2E-39	RWP-RK domain-containing protein
+CcGene_12999_1	FAR1	AT4G38180.1	2E-16	FAR1-related sequence 5
+CcGene_13023_1	Trihelix	AT3G58630.1	3E-49	sequence-specific DNA binding transcription factors
+CcGene_13041_1	NAC	AT5G08790.1	0.000009	NAC family protein
+CcGene_13077_1	bHLH	AT4G00120.1	8E-44	bHLH family protein
+CcGene_13125_1	NAC	AT3G49530.1	3E-84	NAC domain containing protein 62
+CcGene_13146_1	FAR1	AT4G38180.1	4E-16	FAR1-related sequence 5
+CcGene_13180_1	bHLH	AT4G20970.1	1E-23	bHLH family protein
+CcGene_13217_1	WRKY	AT2G30590.1	1E-123	WRKY DNA-binding protein 21
+CcGene_13255_1	NF-YA	AT5G12840.2	3E-52	nuclear factor Y, subunit A1
+CcGene_13318_1	bZIP	AT1G19490.1	2E-24	bZIP family protein
+CcGene_13399_1	Trihelix	AT3G10030.1	0	Trihelix family protein
+CcGene_13419_1	SBP	AT3G57920.1	1E-50	squamosa promoter binding protein-like 15
+CcGene_13442_1	NAC	AT3G04060.1	1E-101	NAC domain containing protein 46
+CcGene_13453_1	bZIP	AT4G36730.2	1E-103	G-box binding factor 1
+CcGene_13584_1	WRKY	AT2G38470.1	1E-112	WRKY DNA-binding protein 33
+CcGene_13593_1	NAC	AT5G22380.1	0.00007	NAC domain containing protein 90
+CcGene_13664_1	NAC	AT2G27300.1	2E-74	NTM1-like 8
+CcGene_13667_1	E2F/DP	AT5G22220.2	1E-136	E2F transcription factor 1
+CcGene_13768_1	Trihelix	AT5G63420.1	0	Trihelix family protein
+CcGene_13783_1	bHLH	AT1G51140.1	1E-34	bHLH family protein
+CcGene_13801_1	Nin-like	AT4G35270.1	0	Nin-like family protein
+CcGene_13845_1	HSF	AT4G36990.1	3E-70	heat shock factor 4
+CcGene_13939_1	YABBY	AT1G69180.1	4E-30	YABBY family protein
+CcGene_14011_1	WRKY	AT1G18860.1	7E-62	WRKY DNA-binding protein 61
+CcGene_14077_1	bHLH	AT1G22490.1	4E-64	bHLH family protein
+CcGene_14115_1	CAMTA	AT1G67310.1	0	Calmodulin-binding transcription activator protein with CG-1 and Ankyrin domains
+CcGene_14126_1	bHLH	AT1G05710.3	1E-55	bHLH family protein
+CcGene_14191_1	CPP	AT4G29000.1	4E-99	Tesmin/TSO1-like CXC domain-containing protein
+CcGene_14237_1	NF-YB	AT2G37060.1	4E-48	nuclear factor Y, subunit B8
+CcGene_14240_1	NAC	AT3G04060.1	1E-10	NAC domain containing protein 46
+CcGene_14251_1	Trihelix	AT5G01380.1	2E-73	Trihelix family protein
+CcGene_14297_1	WRKY	AT5G13080.1	7E-56	WRKY DNA-binding protein 75
+CcGene_14313_1	bHLH	AT4G36930.1	1E-45	bHLH family protein
+CcGene_14354_1	GATA	AT5G49300.1	2E-30	GATA transcription factor 16
+CcGene_14361_1	WRKY	AT2G47260.1	4E-57	WRKY DNA-binding protein 23
+CcGene_14385_1	NAC	AT5G14000.1	3E-34	NAC domain containing protein 84
+CcGene_14421_1	GATA	AT5G66320.2	1E-58	GATA transcription factor 5
+CcGene_14533_1	GeBP	AT1G61730.1	1E-11	DNA-binding storekeeper protein-related transcriptional regulator
+CcGene_14578_1	YABBY	AT1G69180.1	9E-35	YABBY family protein
+CcGene_14628_1	bZIP	AT2G36270.1	5E-30	bZIP family protein
+CcGene_14631_1	NF-YB	AT2G27470.1	1E-34	nuclear factor Y, subunit B11
+CcGene_14683_1	YABBY	AT2G26580.1	4E-66	YABBY family protein
+CcGene_14762_1	NAC	AT2G17040.1	9E-99	NAC domain containing protein 36
+CcGene_14776_1	Dof	AT5G39660.1	9E-77	cycling DOF factor 2
+CcGene_14811_1	SBP	AT1G20980.1	1E-128	squamosa promoter binding protein-like 14
+CcGene_14842_1	FAR1	AT1G76320.2	2E-64	FAR1-related sequence 4
+CcGene_14941_1	LBD	AT3G58190.1	3E-68	lateral organ boundaries-domain 29
+CcGene_15127_1	bHLH	AT4G33880.1	7E-43	ROOT HAIR DEFECTIVE 6-LIKE 2
+CcGene_15178_1	bHLH	AT5G54680.1	1E-110	bHLH family protein
+CcGene_15236_1	bHLH	AT1G35460.1	2E-70	bHLH family protein
+CcGene_15244_1	NAC	AT3G15510.1	2E-23	NAC domain containing protein 2
+CcGene_15262_1	LBD	AT1G06280.1	1E-39	LOB domain-containing protein 2
+CcGene_15270_1	NAC	AT5G17260.1	8E-56	NAC domain containing protein 86
+CcGene_15354_1	FAR1	AT4G38180.1	1E-10	FAR1-related sequence 5
+CcGene_15442_1	bHLH	AT2G42280.1	3E-50	bHLH family protein
+CcGene_15571_1	HSF	AT4G36990.1	4E-75	heat shock factor 4
+CcGene_15657_1	Dof	AT4G24060.1	1E-39	Dof family protein
+CcGene_15729_1	FAR1	AT3G22170.2	0	far-red elongated hypocotyls 3
+CcGene_15730_1	FAR1	AT2G32250.2	0	FAR1-related sequence 2
+CcGene_15735_1	bHLH	AT4G00050.1	3E-12	bHLH family protein
+CcGene_15815_1	NAC	AT5G39820.1	2E-64	NAC domain containing protein 94
+CcGene_15880_1	EIL	AT1G73730.1	1E-175	ETHYLENE-INSENSITIVE3-like 3
+CcGene_15885_1	bHLH	AT1G10120.1	1E-78	bHLH family protein
+CcGene_16091_1	Nin-like	AT1G20640.2	0	Nin-like family protein
+CcGene_16153_1	bZIP	AT3G58120.1	2E-93	bZIP family protein
+CcGene_16192_1	GRAS	AT4G00150.1	1E-94	GRAS family protein
+CcGene_16213_1	NAC	AT3G17730.1	1E-81	NAC domain containing protein 57
+CcGene_16214_1	WRKY	AT2G34830.1	2E-68	WRKY DNA-binding protein 35
+CcGene_16220_1	bHLH	AT4G34530.1	6E-46	cryptochrome-interacting basic-helix-loop-helix 1
+CcGene_16227_1	GATA	AT3G50870.1	4E-54	GATA family protein
+CcGene_16252_1	bZIP	AT3G12250.1	1E-162	TGACG motif-binding factor 6
+CcGene_16258_1	FAR1	AT4G38180.1	1E-18	FAR1-related sequence 5
+CcGene_16292_1	bHLH	AT5G41315.1	1E-158	bHLH family protein
+CcGene_16365_1	NAC	AT1G34190.1	1E-132	NAC domain containing protein 17
+CcGene_16430_1	NAC	AT1G01720.1	7E-92	NAC family protein
+CcGene_16441_1	bZIP	AT4G34000.1	3E-84	abscisic acid responsive elements-binding factor 3
+CcGene_16520_1	bZIP	AT1G43700.1	1E-80	VIRE2-interacting protein 1
+CcGene_16533_1	HSF	AT2G26150.1	1E-61	heat shock transcription factor A2
+CcGene_16568_1	HSF	AT2G26150.1	1E-109	heat shock transcription factor A2
+CcGene_16614_1	CAMTA	AT4G16150.1	0	calmodulin binding;transcription regulators
+CcGene_16639_1	FAR1	AT4G38180.1	5E-18	FAR1-related sequence 5
+CcGene_16674_1	NF-YC	AT1G56170.1	1E-44	nuclear factor Y, subunit C2
+CcGene_16729_1	bZIP	AT1G06070.1	1E-159	bZIP family protein
+CcGene_16780_1	FAR1	AT1G10240.1	4E-11	FAR1-related sequence 11
+CcGene_16818_1	GATA	AT1G08010.2	4E-42	GATA transcription factor 11
+CcGene_16886_1	GeBP	AT4G00390.1	0.000002	DNA-binding storekeeper protein-related transcriptional regulator
+CcGene_16951_1	bHLH	AT5G53210.1	1E-97	bHLH family protein
+CcGene_16976_1	FAR1	AT4G15090.1	0.000000006	FAR1 family protein
+CcGene_17014_1	GRAS	AT3G03450.1	1E-100	RGA-like 2
+CcGene_17035_1	bHLH	AT4G37850.1	3E-52	bHLH family protein
+CcGene_17036_1	bHLH	AT4G37850.1	1E-38	bHLH family protein
+CcGene_17037_1	YABBY	AT1G08465.1	2E-29	YABBY family protein
+CcGene_17040_1	E2F/DP	AT5G22220.3	1E-140	E2F transcription factor 1
+CcGene_17054_1	bHLH	AT1G68810.1	5E-90	bHLH family protein
+CcGene_17057_1	bZIP	AT1G42990.1	2E-18	basic region/leucine zipper motif 60
+CcGene_17070_1	NAC	AT4G28500.1	1E-120	NAC domain containing protein 73
+CcGene_17101_1	NAC	AT5G63790.1	0.0000006	NAC domain containing protein 102
+CcGene_17195_1	CPP	AT2G20110.1	1E-123	Tesmin/TSO1-like CXC domain-containing protein
+CcGene_17203_1	TCP	AT1G67260.2	1E-28	TCP family protein
+CcGene_17215_1	bHLH	AT5G57150.1	3E-80	bHLH family protein
+CcGene_17255_1	Nin-like	AT4G38340.1	0.0002	Nin-like family protein
+CcGene_17285_1	bHLH	AT1G68920.3	2E-66	bHLH family protein
+CcGene_17378_1	FAR1	AT1G10240.1	0.0000007	FAR1-related sequence 11
+CcGene_17398_1	GATA	AT4G17570.2	3E-15	GATA transcription factor 26
+CcGene_17485_1	bZIP	AT2G35530.1	1E-161	basic region/leucine zipper transcription factor 16
+CcGene_17519_1	CPP	AT4G29000.1	6E-65	Tesmin/TSO1-like CXC domain-containing protein
+CcGene_17540_1	bHLH	AT2G14760.1	1E-52	bHLH family protein
+CcGene_17547_1	WRKY	AT1G80840.1	7E-59	WRKY DNA-binding protein 40
+CcGene_17575_1	FAR1	AT1G10240.1	3E-11	FAR1-related sequence 11
+CcGene_17601_1	WRKY	AT2G30590.1	1E-50	WRKY DNA-binding protein 21
+CcGene_17629_1	CAMTA	AT5G09410.3	3E-42	ethylene induced calmodulin binding protein
+CcGene_17630_1	bHLH	AT1G59640.1	2E-83	BIG PETAL P
+CcGene_17758_1	WRKY	AT4G01250.1	6E-52	WRKY family protein
+CcGene_17841_1	HSF	AT5G45710.1	1E-101	HSF family protein
+CcGene_17858_1	bHLH	AT1G69010.1	1E-112	BES1-interacting Myc-like protein 2
+CcGene_17929_1	FAR1	AT4G19990.2	1E-19	FAR1-related sequence 1
+CcGene_17981_1	LBD	AT1G31320.1	7E-78	LOB domain-containing protein 4
+CcGene_18025_1	GRAS	AT1G07530.1	5E-43	SCARECROW-like 14
+CcGene_18056_1	bHLH	AT5G53210.1	2E-47	bHLH family protein
+CcGene_18123_1	SRS	AT5G66350.1	2E-44	Lateral root primordium (LRP) protein-related
+CcGene_18287_1	WRKY	AT5G13080.1	1E-52	WRKY DNA-binding protein 75
+CcGene_18292_1	NAC	AT5G63790.1	2E-17	NAC domain containing protein 102
+CcGene_18293_1	NAC	AT4G36160.1	6E-13	NAC domain containing protein 76
+CcGene_18414_1	NAC	AT1G01720.1	5E-57	NAC family protein
+CcGene_18540_1	FAR1	AT1G10240.1	0.000000003	FAR1-related sequence 11
+CcGene_18567_1	bHLH	AT2G28160.1	3E-84	FER-like regulator of iron uptake
+CcGene_18596_1	bHLH	AT4G20970.1	2E-18	bHLH family protein
+CcGene_18708_1	LBD	AT1G31320.1	4E-64	LOB domain-containing protein 4
+CcGene_18716_1	GeBP	AT4G01260.1	2E-20	DNA-binding storekeeper protein-related transcriptional regulator
+CcGene_18762_1	bHLH	AT5G65640.1	4E-78	beta HLH protein 93
+CcGene_18780_1	bHLH	AT5G38860.1	6E-52	BES1-interacting Myc-like protein 3
+CcGene_18821_1	bHLH	AT2G14760.1	2E-59	bHLH family protein
+CcGene_18831_1	WRKY	AT2G46130.1	6E-56	WRKY DNA-binding protein 43
+CcGene_18941_1	NAC	AT5G61430.1	1E-105	NAC domain containing protein 100
+CcGene_18945_1	Nin-like	AT1G18790.1	5E-50	RWP-RK domain-containing protein
+CcGene_19023_1	LBD	AT1G07900.1	3E-74	LOB domain-containing protein 1
+CcGene_19049_1	Trihelix	AT3G14180.1	1E-102	sequence-specific DNA binding transcription factors
+CcGene_19089_1	bHLH	AT1G72210.1	2E-76	bHLH family protein
+CcGene_19121_1	WRKY	AT4G01250.1	1E-55	WRKY family protein
+CcGene_19182_1	bHLH	AT4G33880.1	9E-59	ROOT HAIR DEFECTIVE 6-LIKE 2
+CcGene_19194_1	bHLH	AT5G57150.1	2E-75	bHLH family protein
+CcGene_19273_1	Trihelix	AT2G33550.1	0.000000008	Trihelix family protein
+CcGene_19281_1	GeBP	AT4G00390.1	3E-15	DNA-binding storekeeper protein-related transcriptional regulator
+CcGene_19303_1	bHLH	AT1G62975.1	2E-41	bHLH family protein
+CcGene_19304_1	bHLH	AT5G51780.1	7E-42	bHLH family protein
+CcGene_19305_1	NAC	AT5G53950.1	1E-114	NAC family protein
+CcGene_19327_1	WRKY	AT1G80840.1	8E-98	WRKY DNA-binding protein 40
+CcGene_19405_1	bHLH	AT4G20970.1	1E-35	bHLH family protein
+CcGene_19425_1	HSF	AT3G22830.1	8E-78	heat shock transcription factor A6B
+CcGene_19475_1	NAC	AT5G13180.1	1E-11	NAC domain containing protein 83
+CcGene_19497_1	bHLH	AT5G54680.1	8E-77	bHLH family protein
+CcGene_19521_1	bHLH	AT5G54680.1	6E-83	bHLH family protein
+CcGene_19524_1	GATA	AT4G26150.1	7E-28	cytokinin-responsive gata factor 1
+CcGene_19577_1	CAMTA	AT4G16150.1	0	calmodulin binding;transcription regulators
+CcGene_19610_1	FAR1	AT3G22170.2	0.00008	far-red elongated hypocotyls 3
+CcGene_19611_1	CAMTA	AT1G67310.1	0	Calmodulin-binding transcription activator protein with CG-1 and Ankyrin domains
+CcGene_19623_1	HSF	AT1G32330.1	1E-129	heat shock transcription factor A1D
+CcGene_19641_1	bHLH	AT5G65640.1	6E-83	beta HLH protein 93
+CcGene_19742_1	HSF	AT3G22830.1	1E-119	heat shock transcription factor A6B
+CcGene_19756_1	bHLH	AT5G54680.1	1E-101	bHLH family protein
+CcGene_19781_1	Trihelix	AT5G63420.1	0	Trihelix family protein
+CcGene_19817_1	TCP	AT3G02150.1	7E-50	plastid transcription factor 1
+CcGene_19845_1	NF-YA	AT1G30500.1	7E-39	nuclear factor Y, subunit A7
+CcGene_19856_1	bHLH	AT2G34820.1	5E-28	bHLH family protein
+CcGene_20026_1	NAC	AT5G09330.3	6E-38	NAC domain containing protein 82
+CcGene_20036_1	GATA	AT4G17570.3	1E-124	GATA transcription factor 26
+CcGene_20066_1	LBD	AT3G47870.1	6E-44	LOB domain-containing protein 27
+CcGene_20126_1	bHLH	AT3G06120.1	3E-76	bHLH family protein
+CcGene_20131_1	TCP	AT5G60970.1	4E-49	TEOSINTE BRANCHED 1, cycloidea and PCF transcription factor 5
+CcGene_20161_1	WRKY	AT2G38470.1	1E-122	WRKY DNA-binding protein 33
+CcGene_20166_1	bHLH	AT1G30670.1	7E-28	bHLH family protein
+CcGene_20168_1	WRKY	AT2G34830.1	6E-89	WRKY DNA-binding protein 35
+CcGene_20173_1	GeBP	AT4G00390.1	1E-17	DNA-binding storekeeper protein-related transcriptional regulator
+CcGene_20196_1	bHLH	AT4G02590.2	2E-85	bHLH family protein
+CcGene_20248_1	NF-YC	AT1G54830.3	0.00001	nuclear factor Y, subunit C3
+CcGene_20255_1	bHLH	AT5G65640.1	3E-74	beta HLH protein 93
+CcGene_20275_1	bHLH	AT3G28857.1	1E-26	bHLH family protein
+CcGene_20309_1	WRKY	AT5G15130.1	3E-71	WRKY DNA-binding protein 72
+CcGene_20381_1	NAC	AT1G34190.1	1E-132	NAC domain containing protein 17
+CcGene_20406_1	NAC	AT3G15170.1	1E-85	NAC family protein
+CcGene_20415_1	Dof	AT3G55370.1	3E-51	OBF-binding protein 3
+CcGene_20452_1	HSF	AT3G22830.1	1E-114	heat shock transcription factor A6B
+CcGene_20512_1	BBR-BPC	AT2G21240.1	1E-105	basic pentacysteine 4
+CcGene_20555_1	Trihelix	AT3G58630.1	2E-41	sequence-specific DNA binding transcription factors
+CcGene_20580_1	bZIP	AT3G56850.1	1E-93	ABA-responsive element binding protein 3
+CcGene_20591_1	LBD	AT5G66870.1	3E-71	ASYMMETRIC LEAVES 2-like 1
+CcGene_20625_1	bZIP	AT2G16770.1	1E-105	bZIP family protein
+CcGene_20678_1	bZIP	AT3G17609.2	4E-49	HY5-homolog
+CcGene_20693_1	WRKY	AT2G04880.2	4E-73	zinc-dependent activator protein-1
+CcGene_20697_1	GATA	AT1G08010.2	9E-38	GATA transcription factor 11
+CcGene_20708_1	LBD	AT4G00220.1	1E-81	LBD family protein
+CcGene_20750_1	bHLH	AT3G20640.1	1E-65	bHLH family protein
+CcGene_20813_1	GRAS	AT3G54220.1	0	GRAS family protein
+CcGene_20834_1	FAR1	AT3G59470.2	9E-91	FAR1 family protein
+CcGene_20861_1	WRKY	AT5G56270.1	0	WRKY DNA-binding protein 2
+CcGene_20894_1	GRAS	AT1G66350.1	1E-35	RGA-like 1
+CcGene_20914_1	LBD	AT2G30130.1	3E-80	LBD family protein
+CcGene_21027_1	BES1	AT1G75080.2	1E-105	BES1 family protein
+CcGene_21079_1	WRKY	AT1G13960.1	1E-128	WRKY DNA-binding protein 4
+CcGene_21104_1	FAR1	AT1G10240.1	8E-18	FAR1-related sequence 11
+CcGene_21130_1	NAC	AT5G18270.1	2E-87	Arabidopsis NAC domain containing protein 87
+CcGene_21154_1	GRAS	AT5G17490.1	2E-75	RGA-like protein 3
+CcGene_21160_1	Trihelix	AT5G28300.1	1E-92	Trihelix family protein
+CcGene_21325_1	E2F/DP	AT5G03415.1	1E-102	Transcription factor DP
+CcGene_21329_1	bHLH	AT4G00050.1	9E-24	bHLH family protein
+CcGene_21349_1	bHLH	AT3G28857.1	4E-44	bHLH family protein
+CcGene_21355_1	BES1	AT2G45880.1	0	beta-amylase 7
+CcGene_21363_1	CAMTA	AT4G16150.1	0	calmodulin binding;transcription regulators
+CcGene_21367_1	Trihelix	AT1G76880.1	1E-142	Trihelix family protein
+CcGene_21481_1	bZIP	AT5G06839.3	1E-176	bZIP family protein
+CcGene_21517_1	NF-YC	AT1G54830.3	0.00001	nuclear factor Y, subunit C3
+CcGene_21763_1	bHLH	AT5G50915.2	4E-29	bHLH family protein
+CcGene_21831_1	WRKY	AT1G18860.1	3E-56	WRKY DNA-binding protein 61
+CcGene_21850_1	bHLH	AT2G31210.1	1E-81	bHLH family protein
+CcGene_21986_1	NF-YA	AT1G30500.2	2E-47	nuclear factor Y, subunit A7
+CcGene_21999_1	bZIP	AT2G16770.1	1E-113	bZIP family protein
+CcGene_22024_1	NAC	AT5G53950.1	1E-104	NAC family protein
+CcGene_22082_1	YABBY	AT2G45190.1	5E-52	YABBY family protein
+CcGene_22110_1	WRKY	AT1G29280.1	9E-38	WRKY DNA-binding protein 65
+CcGene_22154_1	WRKY	AT4G11070.1	7E-56	WRKY family protein
+CcGene_22158_1	bHLH	AT3G07340.1	7E-90	bHLH family protein
+CcGene_22169_1	FAR1	AT1G10240.1	8E-14	FAR1-related sequence 11
+CcGene_22232_1	NAC	AT1G34190.1	1E-117	NAC domain containing protein 17
+CcGene_22249_1	WRKY	AT5G64810.1	2E-38	WRKY DNA-binding protein 51
+CcGene_22292_1	Dof	AT5G62940.1	3E-40	Dof family protein
+CcGene_22305_1	bHLH	AT3G56770.1	3E-47	bHLH family protein
+CcGene_22317_1	SBP	AT2G47070.1	0	squamosa promoter binding protein-like 1
+CcGene_22421_1	Dof	AT1G51700.1	4E-23	DOF zinc finger protein 1
+CcGene_22422_1	Dof	AT4G38000.1	1E-11	DNA binding with one finger 4.7
+CcGene_22517_1	NAC	AT4G28530.1	7E-91	NAC domain containing protein 74
+CcGene_22618_1	bHLH	AT4G02590.3	2E-71	bHLH family protein
+CcGene_22766_1	GATA	AT3G06740.1	1E-28	GATA transcription factor 15
+CcGene_22783_1	NAC	AT5G13180.1	1E-97	NAC domain containing protein 83
+CcGene_22796_1	TCP	AT5G60970.1	4E-49	TEOSINTE BRANCHED 1, cycloidea and PCF transcription factor 5
+CcGene_22951_1	LBD	AT3G47870.1	1E-42	LOB domain-containing protein 27
+CcGene_22962_1	bHLH	AT5G50915.2	7E-56	bHLH family protein
+CcGene_22980_1	Dof	AT3G47500.1	3E-79	cycling DOF factor 3
+CcGene_22986_1	CPP	AT4G14770.1	3E-28	TESMIN/TSO1-like CXC 2
+CcGene_22988_1	GATA	AT3G60530.1	4E-72	GATA transcription factor 4
+CcGene_23021_1	SRS	AT3G51060.1	1E-72	Lateral root primordium (LRP) protein-related
+CcGene_23098_1	bHLH	AT5G43650.1	1E-44	bHLH family protein
+CcGene_23146_1	GATA	AT1G08010.2	1E-44	GATA transcription factor 11
+CcGene_23267_1	HSF	AT5G62020.1	2E-76	heat shock transcription factor B2A
+CcGene_23382_1	HSF	AT2G41690.1	1E-73	heat shock transcription factor B3
+CcGene_23392_1	VOZ	AT1G28520.2	0	vascular plant one zinc finger protein
+CcGene_23393_1	VOZ	AT1G28520.2	5E-81	vascular plant one zinc finger protein
+CcGene_23403_1	Nin-like	AT1G18790.1	2E-44	RWP-RK domain-containing protein
+CcGene_23413_1	Dof	AT3G55370.1	1E-46	OBF-binding protein 3
+CcGene_23441_1	Trihelix	AT3G54390.1	1E-100	sequence-specific DNA binding transcription factors
+CcGene_23456_1	bHLH	AT4G05170.1	4E-22	bHLH family protein
+CcGene_23481_1	GATA	AT4G17570.3	2E-94	GATA transcription factor 26
+CcGene_23484_1	FAR1	AT1G10240.1	7E-21	FAR1-related sequence 11
+CcGene_23600_1	NAC	AT2G17040.1	3E-88	NAC domain containing protein 36
+CcGene_23656_1	LBD	AT1G06280.1	1E-37	LOB domain-containing protein 2
+CcGene_23658_1	bZIP	AT3G58120.1	1E-38	bZIP family protein
+CcGene_23717_1	TCP	AT2G45680.1	2E-17	TCP family protein
+CcGene_23831_1	GeBP	AT1G61730.1	0.0000003	DNA-binding storekeeper protein-related transcriptional regulator
+CcGene_23858_1	NAC	AT4G28530.1	6E-84	NAC domain containing protein 74
+CcGene_23968_1	HSF	AT2G41690.1	5E-71	heat shock transcription factor B3
+CcGene_23991_1	BES1	AT1G78700.1	1E-129	BES1/BZR1 homolog 4
+CcGene_24001_1	NAC	AT1G76420.1	5E-13	NAC family protein
+CcGene_24040_1	WRKY	AT5G49520.1	4E-18	WRKY DNA-binding protein 48
+CcGene_24154_1	NAC	AT1G65910.1	2E-83	NAC domain containing protein 28
+CcGene_24160_1	NAC	AT3G61910.1	5E-34	NAC domain protein 66
+CcGene_24187_1	NAC	AT5G07680.1	1E-108	NAC domain containing protein 80
+CcGene_24237_1	HSF	AT1G46264.1	1E-119	heat shock transcription factor B4
+CcGene_24294_1	bZIP	AT3G12250.1	1E-169	TGACG motif-binding factor 6
+CcGene_24310_1	bHLH	AT5G62610.1	6E-60	bHLH family protein
+CcGene_24396_1	bHLH	AT3G21330.1	2E-70	bHLH family protein
+CcGene_24441_1	NAC	AT5G24590.2	3E-79	TCV-interacting protein
+CcGene_24446_1	FAR1	AT4G15090.1	5E-16	FAR1 family protein
+CcGene_24477_1	WRKY	AT1G69310.2	1E-68	WRKY DNA-binding protein 57
+CcGene_24505_1	LBD	AT3G26620.1	1E-47	LOB domain-containing protein 23
+CcGene_24524_1	LBD	AT3G49940.1	4E-73	LOB domain-containing protein 38
+CcGene_24597_1	Dof	AT3G55370.1	1E-58	OBF-binding protein 3
+CcGene_24615_1	NAC	AT5G13180.1	1E-72	NAC domain containing protein 83
+CcGene_24626_1	FAR1	AT1G10240.1	2E-11	FAR1-related sequence 11
+CcGene_24640_1	Dof	AT5G39660.1	4E-48	cycling DOF factor 2
+CcGene_24655_1	HSF	AT2G26150.1	1E-102	heat shock transcription factor A2
+CcGene_24694_1	Trihelix	AT2G44730.1	5E-66	Trihelix family protein
+CcGene_24713_1	NAC	AT4G28530.1	5E-92	NAC domain containing protein 74
+CcGene_24719_1	GATA	AT1G08010.2	1E-46	GATA transcription factor 11
+CcGene_24789_1	NAC	AT1G61110.1	2E-33	NAC domain containing protein 25
+CcGene_24804_1	bZIP	AT3G56850.1	9E-81	ABA-responsive element binding protein 3
+CcGene_24892_1	NAC	AT5G08790.1	0.000002	NAC family protein
+CcGene_24903_1	NAC	AT2G24430.2	1E-75	NAC domain containing protein 38
+CcGene_24963_1	NAC	AT5G64530.1	1E-70	xylem NAC domain 1
+CcGene_24976_1	NAC	AT2G02450.1	1E-113	NAC domain containing protein 35
+CcGene_24997_1	BES1	AT1G75080.2	1E-106	BES1 family protein
+CcGene_25014_1	bHLH	AT2G28160.1	1E-58	FER-like regulator of iron uptake
+CcGene_25090_1	NAC	AT3G01600.1	3E-97	NAC domain containing protein 44
+CcGene_25238_1	YABBY	AT2G45190.1	4E-84	YABBY family protein
+CcGene_25272_1	NF-YB	AT5G47670.1	1E-59	nuclear factor Y, subunit B6
+CcGene_25320_1	GRAS	AT1G07530.1	2E-34	SCARECROW-like 14
+CcGene_25404_1	NAC	AT5G39820.1	1E-48	NAC domain containing protein 94
+CcGene_25408_1	bZIP	AT1G08320.2	1E-173	bZIP family protein
+CcGene_25419_1	TCP	AT1G68800.1	7E-25	TCP domain protein 12
+CcGene_25432_1	NAC	AT1G01720.1	1E-133	NAC family protein
+CcGene_25513_1	bHLH	AT4G02590.2	2E-81	bHLH family protein
+CcGene_25533_1	bHLH	AT2G28160.1	2E-57	FER-like regulator of iron uptake
+CcGene_25536_1	WRKY	AT2G37260.1	4E-92	WRKY family protein
+CcGene_25546_1	bZIP	AT2G46270.1	1E-103	G-box binding factor 3
+CcGene_25601_1	bZIP	AT1G42990.1	3E-17	basic region/leucine zipper motif 60
+CcGene_25674_1	NAC	AT3G44290.1	6E-23	NAC domain containing protein 60
+CcGene_25765_1	bHLH	AT1G59640.1	3E-58	BIG PETAL P
+CcGene_25771_1	LBD	AT3G47870.1	5E-55	LOB domain-containing protein 27
+CcGene_25791_1	bHLH	AT3G28857.1	9E-21	bHLH family protein
+CcGene_25868_1	Trihelix	AT1G21200.1	1E-125	sequence-specific DNA binding transcription factors
+CcGene_25901_1	Dof	AT4G24060.1	4E-56	Dof family protein
+CcGene_25938_1	bHLH	AT2G16910.1	1E-124	bHLH family protein
+CcGene_26066_1	SRS	AT3G51060.1	1E-72	Lateral root primordium (LRP) protein-related
+CcGene_26069_1	GATA	AT3G51080.1	8E-52	GATA transcription factor 6
+CcGene_26133_1	LBD	AT2G30130.1	6E-82	LBD family protein
+CcGene_26397_1	WRKY	AT1G29860.1	4E-63	WRKY DNA-binding protein 71
+CcGene_26400_1	bHLH	AT5G57150.1	2E-77	bHLH family protein
+CcGene_26401_1	bHLH	AT5G57150.1	1E-82	bHLH family protein
+CcGene_26466_1	SRS	AT5G12330.4	1E-104	Lateral root primordium (LRP) protein-related
+CcGene_26669_1	WRKY	AT4G01250.1	2E-51	WRKY family protein
+CcGene_26679_1	WRKY	AT1G29280.1	2E-43	WRKY DNA-binding protein 65
+CcGene_26726_1	bHLH	AT2G40200.1	2E-28	bHLH family protein
+CcGene_26758_1	bHLH	AT3G26744.1	1E-131	bHLH family protein
+CcGene_26785_1	LBD	AT1G07900.1	3E-75	LOB domain-containing protein 1
+CcGene_26857_1	HSF	AT5G45710.1	1E-104	HSF family protein
+CcGene_26868_1	FAR1	AT1G10240.1	3E-22	FAR1-related sequence 11
+CcGene_26905_1	SBP	AT3G15270.1	4E-38	squamosa promoter binding protein-like 5
+CcGene_26918_1	bZIP	AT1G75390.1	2E-29	basic leucine-zipper 44
+CcGene_26967_1	WRKY	AT2G38470.1	1E-117	WRKY DNA-binding protein 33
+CcGene_26987_1	SBP	AT2G33810.1	6E-42	squamosa promoter binding protein-like 3
+CcGene_27029_1	BES1	AT1G75080.2	1E-104	BES1 family protein
+CcGene_27046_1	bHLH	AT4G17880.1	1E-140	bHLH family protein
+CcGene_27161_1	SBP	AT5G18830.2	0	squamosa promoter binding protein-like 7
+CcGene_27189_1	NAC	AT3G49530.1	6E-81	NAC domain containing protein 62
+CcGene_27299_1	HSF	AT5G03720.1	2E-98	heat shock transcription factor A3
+CcGene_27380_1	Nin-like	AT4G35270.1	0	Nin-like family protein
+CcGene_27445_1	ZF-HD	AT2G02540.1	2E-72	homeobox protein 21
+CcGene_27447_1	FAR1	AT1G76320.1	2E-20	FAR1-related sequence 4
+CcGene_27495_1	GRAS	AT1G63100.1	0	GRAS family protein
+CcGene_27497_1	GRAS	AT1G63100.1	0	GRAS family protein
+CcGene_27545_1	NAC	AT1G25580.1	1E-169	NAC family protein
+CcGene_27573_1	bHLH	AT5G57150.1	1E-82	bHLH family protein
+CcGene_27664_1	bHLH	AT5G54680.1	6E-85	bHLH family protein
+CcGene_27672_1	bHLH	AT1G74500.1	1E-39	activation-tagged BRI1(brassinosteroid-insensitive 1)-suppressor 1
+CcGene_27674_1	NAC	AT5G61430.1	1E-142	NAC domain containing protein 100
+CcGene_27696_1	HSF	AT5G54070.1	2E-36	heat shock transcription factor A9
+CcGene_27722_1	GRAS	AT3G03450.1	1E-26	RGA-like 2
+CcGene_27745_1	FAR1	AT1G10240.1	0.0000003	FAR1-related sequence 11
+CcGene_27748_1	GATA	AT5G49300.1	2E-39	GATA transcription factor 16
+CcGene_27756_1	WRKY	AT3G58710.1	7E-37	WRKY DNA-binding protein 69
+CcGene_27819_1	S1Fa-like	AT4G12020.2	4E-11	WRKY family protein
+CcGene_27912_1	bHLH	AT1G68920.3	1E-119	bHLH family protein
+CcGene_27915_1	FAR1	AT1G10240.1	4E-10	FAR1-related sequence 11
+CcGene_27942_1	WRKY	AT4G24240.1	5E-81	WRKY DNA-binding protein 7
+CcGene_27954_1	BBR-BPC	AT2G01930.1	2E-79	basic pentacysteine1
+CcGene_27962_1	WRKY	AT2G44745.1	3E-27	WRKY family protein
+CcGene_27986_1	bHLH	AT4G37850.1	9E-59	bHLH family protein
+CcGene_28027_1	bHLH	AT2G31210.1	5E-93	bHLH family protein
+CcGene_28054_1	YABBY	AT1G23420.1	1E-63	YABBY family protein
+CcGene_28100_1	bHLH	AT4G20970.1	4E-24	bHLH family protein
+CcGene_28119_1	HSF	AT4G18880.1	5E-74	heat shock transcription factor A4A
+CcGene_28124_1	SBP	AT3G15270.1	3E-45	squamosa promoter binding protein-like 5
+CcGene_28147_1	bZIP	AT3G12250.1	1E-165	TGACG motif-binding factor 6
+CcGene_28192_1	GATA	AT3G21175.2	1E-84	ZIM-like 1
+CcGene_28213_1	bHLH	AT4G00050.1	1E-35	bHLH family protein
+CcGene_28269_1	Trihelix	AT5G01380.1	9E-39	Trihelix family protein
+CcGene_28303_1	NAC	AT3G15510.1	1E-46	NAC domain containing protein 2
+CcGene_28466_1	bHLH	AT1G05805.1	2E-68	bHLH family protein
+CcGene_28589_1	bZIP	AT3G56850.1	2E-91	ABA-responsive element binding protein 3
+CcGene_28640_1	LBD	AT2G30130.1	2E-75	LBD family protein
+CcGene_28662_1	WRKY	AT2G40740.1	2E-65	WRKY DNA-binding protein 55
+CcGene_28830_1	NAC	AT2G18060.1	1E-146	vascular related NAC-domain protein 1
+CcGene_28873_1	bHLH	AT4G36930.1	1E-39	bHLH family protein
+CcGene_28890_1	BBR-BPC	AT2G21240.1	4E-95	basic pentacysteine 4
+CcGene_28906_1	bHLH	AT3G07340.1	3E-78	bHLH family protein
+CcGene_28911_1	FAR1	AT1G10240.1	2E-23	FAR1-related sequence 11
+CcGene_28917_1	bHLH	AT1G68810.1	5E-95	bHLH family protein
+CcGene_28942_1	NAC	AT1G01720.1	4E-56	NAC family protein
+CcGene_28960_1	SBP	AT1G02065.1	2E-74	squamosa promoter binding protein-like 8
+CcGene_29016_1	Dof	AT5G39660.1	1E-100	cycling DOF factor 2
+CcGene_29077_1	HSF	AT4G13980.1	1E-162	HSF family protein
+CcGene_29156_1	NF-YA	AT5G06510.2	6E-51	nuclear factor Y, subunit A10
+CcGene_29165_1	WRKY	AT4G31550.1	3E-51	WRKY DNA-binding protein 11
+CcGene_29169_1	bHLH	AT4G21330.1	1E-40	bHLH family protein
+CcGene_29180_1	WRKY	AT1G62300.1	1E-155	WRKY family protein
+CcGene_29210_1	Trihelix	AT3G10030.2	7E-70	Trihelix family protein
+CcGene_29222_1	bHLH	AT5G65640.1	3E-76	beta HLH protein 93
+CcGene_29244_1	Trihelix	AT2G33550.1	7E-81	Trihelix family protein
+CcGene_29284_1	bHLH	AT5G67060.1	4E-44	bHLH family protein
+CcGene_29285_1	HSF	AT1G46264.1	1E-104	heat shock transcription factor B4
+CcGene_29315_1	STAT	AT1G17040.1	1E-140	SH2 domain protein A
+CcGene_29386_1	WRKY	AT5G56270.1	4E-67	WRKY DNA-binding protein 2
+CcGene_29432_1	bHLH	AT1G63650.1	1E-143	bHLH family protein
+CcGene_29456_1	NAC	AT3G15510.1	2E-95	NAC domain containing protein 2
+CcGene_29660_1	SBP	AT1G69170.1	2E-45	SBP family protein
+CcGene_29662_1	bHLH	AT1G72210.1	2E-78	bHLH family protein
+CcGene_29736_1	bHLH	AT3G24140.1	1E-123	bHLH family protein
+CcGene_29795_1	NAC	AT5G22380.1	3E-81	NAC domain containing protein 90
+CcGene_29845_1	WRKY	AT4G01250.1	2E-42	WRKY family protein
+CcGene_29905_1	TCP	AT3G18550.2	7E-33	TCP family protein
+CcGene_30095_1	Dof	AT3G55370.1	4E-55	OBF-binding protein 3
+CcGene_30112_1	YABBY	AT2G45190.1	3E-70	YABBY family protein
+CcGene_30130_1	WRKY	AT5G26170.1	6E-43	WRKY DNA-binding protein 50
+CcGene_30142_1	HSF	AT4G18880.1	9E-86	heat shock transcription factor A4A
+CcGene_30179_1	GATA	AT4G32890.1	3E-40	GATA transcription factor 9
+CcGene_30208_1	NF-YB	AT4G14540.1	3E-77	nuclear factor Y, subunit B3
+CcGene_30210_1	bHLH	AT2G40200.1	4E-40	bHLH family protein
+CcGene_30297_1	CPP	AT3G22780.1	1E-159	Tesmin/TSO1-like CXC domain-containing protein
+CcGene_30362_1	bHLH	AT3G23690.1	2E-47	bHLH family protein
+CcGene_30513_1	NAC	AT5G64530.1	6E-82	xylem NAC domain 1
+CcGene_30520_1	bZIP	AT1G03970.1	9E-43	G-box binding factor 4
+CcGene_30536_1	SBP	AT2G33810.1	4E-41	squamosa promoter binding protein-like 3
+CcGene_30596_1	GRAS	AT1G66350.1	1E-101	RGA-like 1
+CcGene_03047_1	GRF	AT3G52910.1	8E-67	growth-regulating factor 4
+CcGene_04409_1	GRF	AT4G37740.1	5E-56	growth-regulating factor 2
+CcGene_05592_1	GRF	AT2G36400.1	1E-44	growth-regulating factor 3
+CcGene_13904_1	GRF	AT3G52910.1	4E-64	growth-regulating factor 4
+CcGene_22070_1	GRF	AT4G37740.1	1E-37	growth-regulating factor 2
+CcGene_25482_1	GRF	AT2G22840.1	4E-60	growth-regulating factor 1
+CcGene_01025_1	ARF	AT4G23980.1	0	auxin response factor 9
+CcGene_02229_1	ARF	AT4G30080.1	0	auxin response factor 16
+CcGene_03912_1	ARF	AT5G60450.1	0	auxin response factor 4
+CcGene_04958_1	ARF	AT4G30080.1	0	auxin response factor 16
+CcGene_05152_1	ARF	AT4G30080.1	0	auxin response factor 16
+CcGene_05441_1	ARF	AT1G77850.1	1E-113	auxin response factor 17
+CcGene_06342_1	ARF	AT2G33860.1	0	ARF family protein
+CcGene_06886_1	ARF	AT5G37020.1	0	auxin response factor 8
+CcGene_07061_1	ARF	AT1G59750.4	0	auxin response factor 1
+CcGene_07684_1	ARF	AT5G62000.3	0	auxin response factor 2
+CcGene_15683_1	ARF	AT4G30080.1	0	auxin response factor 16
+CcGene_16184_1	ARF	AT1G77850.1	1E-172	auxin response factor 17
+CcGene_21223_1	ARF	AT1G59750.4	0	auxin response factor 1
+CcGene_23121_1	ARF	AT3G61830.1	1E-177	auxin response factor 18
+CcGene_23388_1	ARF	AT2G33860.1	0	ARF family protein
+CcGene_26759_1	ARF	AT5G62000.3	0	auxin response factor 2
+CcGene_28159_1	ARF	AT5G60450.1	0	auxin response factor 4
+CcGene_00084_1	B3	AT2G24650.1	0.0003	DNA binding;DNA binding;sequence-specific DNA binding transcription factors
+CcGene_01090_1	B3	AT5G42700.1	1E-23	B3 family protein
+CcGene_03083_1	B3	AT1G49475.1	2E-22	B3 family protein
+CcGene_03528_1	B3	AT4G32010.1	1E-119	HSI2-like 1
+CcGene_04018_1	B3	AT5G18000.1	0.00003	VERDANDI
+CcGene_04169_1	B3	AT2G36080.1	1E-67	B3 family protein
+CcGene_04228_1	B3	AT3G18990.1	0.00001	B3 family protein
+CcGene_04359_1	B3	AT1G19850.1	1E-114	ARF family protein
+CcGene_04815_1	B3	AT3G06160.1	2E-15	B3 family protein
+CcGene_05335_1	B3	AT3G18990.1	1E-22	B3 family protein
+CcGene_05618_1	B3	AT1G19850.1	1E-130	ARF family protein
+CcGene_05765_1	B3	AT1G49480.1	0.00000004	related to vernalization1 1
+CcGene_05766_1	B3	AT3G18990.1	1E-13	B3 family protein
+CcGene_06925_1	B3	AT3G19184.1	9E-38	B3 family protein
+CcGene_07285_1	B3	AT4G31690.1	8E-14	B3 family protein
+CcGene_07332_1	B3	AT3G18990.1	2E-19	B3 family protein
+CcGene_07695_1	B3	AT1G49475.1	2E-19	B3 family protein
+CcGene_09263_1	B3	AT3G18990.1	0.00001	B3 family protein
+CcGene_09381_1	B3	AT5G18090.1	0.00008	B3 family protein
+CcGene_09680_1	B3	AT2G24690.1	0.00007	B3 family protein
+CcGene_10370_1	B3	AT3G18990.1	1E-20	B3 family protein
+CcGene_10371_1	B3	AT3G18990.1	7E-15	B3 family protein
+CcGene_10813_1	B3	AT5G58280.1	3E-50	B3 family protein
+CcGene_11178_1	B3	AT4G30080.1	0.00005	auxin response factor 16
+CcGene_11305_1	B3	AT5G18090.1	0.00009	B3 family protein
+CcGene_11649_1	B3	AT2G30470.1	0	high-level expression of sugar-inducible gene 2
+CcGene_11891_1	B3	AT3G18990.1	4E-20	B3 family protein
+CcGene_12549_1	B3	AT3G18990.1	7E-15	B3 family protein
+CcGene_13848_1	B3	AT3G19184.1	9E-41	B3 family protein
+CcGene_15113_1	B3	AT5G42700.1	3E-60	B3 family protein
+CcGene_15329_1	B3	AT3G18990.1	1E-33	B3 family protein
+CcGene_15607_1	B3	AT3G18990.1	2E-40	B3 family protein
+CcGene_15737_1	B3	AT3G19184.1	2E-38	B3 family protein
+CcGene_15887_1	B3	AT1G49475.1	9E-11	B3 family protein
+CcGene_16103_1	B3	AT5G42700.1	1E-28	B3 family protein
+CcGene_16604_1	B3	AT5G18090.1	0.00004	B3 family protein
+CcGene_16843_1	B3	AT4G31690.1	0.00000002	B3 family protein
+CcGene_16971_1	B3	AT3G19184.1	6E-68	B3 family protein
+CcGene_17458_1	B3	AT2G24690.1	8E-13	B3 family protein
+CcGene_18044_1	B3	AT5G42700.1	6E-29	B3 family protein
+CcGene_18078_1	B3	AT3G18990.1	1E-18	B3 family protein
+CcGene_18412_1	B3	AT5G42700.1	1E-26	B3 family protein
+CcGene_18918_1	B3	AT4G31650.1	0.0004	B3 family protein
+CcGene_19713_1	B3	AT3G18990.1	9E-27	B3 family protein
+CcGene_19838_1	B3	AT4G00260.1	3E-11	B3 family protein
+CcGene_20212_1	B3	AT2G24700.1	0.00004	B3 family protein
+CcGene_20461_1	B3	AT4G31650.1	0.0004	B3 family protein
+CcGene_20496_1	B3	AT3G24650.1	1E-117	B3 family protein
+CcGene_20576_1	B3	AT1G49480.1	3E-16	related to vernalization1 1
+CcGene_20628_1	B3	AT5G42700.1	9E-30	B3 family protein
+CcGene_20654_1	B3	AT4G33280.1	0.0002	B3 family protein
+CcGene_20691_1	B3	AT1G49480.1	0.00005	related to vernalization1 1
+CcGene_20816_1	B3	AT4G32010.1	1E-170	HSI2-like 1
+CcGene_21787_1	B3	AT4G32010.1	3E-37	HSI2-like 1
+CcGene_21880_1	B3	AT4G31650.1	0.00001	B3 family protein
+CcGene_22201_1	B3	AT3G06160.1	0.00002	B3 family protein
+CcGene_23353_1	B3	AT3G18990.1	3E-34	B3 family protein
+CcGene_23354_1	B3	AT1G49480.1	4E-19	related to vernalization1 1
+CcGene_23355_1	B3	AT3G18990.1	1E-18	B3 family protein
+CcGene_23631_1	B3	AT5G06250.2	4E-69	B3 family protein
+CcGene_24666_1	B3	AT1G49480.1	2E-13	related to vernalization1 1
+CcGene_24950_1	B3	AT4G31650.1	0.000007	B3 family protein
+CcGene_26247_1	B3	AT1G49480.1	0.00001	related to vernalization1 1
+CcGene_26557_1	B3	AT5G60140.1	2E-15	B3 family protein
+CcGene_27249_1	B3	AT1G16640.1	0.0000004	B3 family protein
+CcGene_27614_1	B3	AT4G34400.1	0.000006	B3 family protein
+CcGene_28002_1	B3	AT3G19184.1	5E-35	B3 family protein
+CcGene_28169_1	B3	AT5G66980.1	1E-28	B3 family protein
+CcGene_28170_1	B3	AT5G66980.1	9E-29	B3 family protein
+CcGene_28323_1	B3	AT3G24650.1	1E-122	B3 family protein
+CcGene_29278_1	B3	AT4G31650.1	1E-12	B3 family protein
+CcGene_01197_1	HB-other	AT1G28420.1	2E-15	homeobox-1
+CcGene_03196_1	HB-other	AT3G18380.1	9E-57	sequence-specific DNA binding transcription factors;sequence-specific DNA binding
+CcGene_04036_1	HB-other	AT1G30490.1	1E-21	HD-ZIP family protein
+CcGene_04713_1	HB-other	AT5G11270.1	3E-74	overexpressor of cationic peroxidase 3
+CcGene_16284_1	HB-other	AT1G28420.1	0	homeobox-1
+CcGene_17072_1	HB-other	AT5G44180.1	0	Homeodomain-like transcriptional regulator
+CcGene_19245_1	HB-other	AT1G28420.1	0	homeobox-1
+CcGene_23269_1	HB-other	AT4G03250.1	2E-68	HB-other family protein
+CcGene_26179_1	HB-other	AT3G18380.1	1E-118	sequence-specific DNA binding transcription factors;sequence-specific DNA binding
+CcGene_26563_1	HB-other	AT1G52150.3	3E-14	HD-ZIP family protein
+CcGene_27805_1	HB-other	AT4G04890.1	4E-28	protodermal factor 2
+CcGene_29576_1	HB-other	AT4G02560.2	1E-134	HB-other family protein
+CcGene_00306_1	WOX	AT2G28610.1	2E-36	WOX family protein
+CcGene_09562_1	WOX	AT1G46480.1	6E-73	WUSCHEL related homeobox 4
+CcGene_23249_1	WOX	AT3G18010.1	2E-60	WUSCHEL related homeobox 1
+CcGene_04969_1	WOX	AT5G59340.1	2E-46	WUSCHEL related homeobox 2
+CcGene_05528_1	WOX	AT1G46480.1	2E-54	WUSCHEL related homeobox 4
+CcGene_10187_1	WOX	AT2G17950.1	2E-50	WOX family protein
+CcGene_27266_1	WOX	AT3G11260.1	7E-45	WUSCHEL related homeobox 5
+CcGene_11335_1	WOX	AT2G33880.1	1E-78	homeobox-3
+CcGene_09872_1	WOX	AT3G18010.1	7E-38	WUSCHEL related homeobox 1
+CcGene_18541_1	WOX	AT4G35550.1	3E-76	WUSCHEL related homeobox 13
+CcGene_11671_1	WOX	AT4G35550.1	2E-85	WUSCHEL related homeobox 13
+CcGene_04550_1	WOX	AT3G03660.1	4E-44	WUSCHEL related homeobox 11
+CcGene_09749_1	WOX	AT4G35550.1	2E-59	WUSCHEL related homeobox 13
+CcGene_18351_1	WOX	AT5G17810.1	6E-40	WUSCHEL related homeobox 12
+CcGene_18127_1	TALE	AT2G16400.1	1E-118	BEL1-like homeodomain 7
+CcGene_07262_1	TALE	AT4G36870.2	1E-180	BEL1-like homeodomain 2
+CcGene_09842_1	TALE	AT4G34610.2	1E-132	BEL1-like homeodomain 6
+CcGene_24798_1	TALE	AT5G41410.1	1E-144	TALE family protein
+CcGene_03727_1	TALE	AT2G35940.1	1E-175	BEL1-like homeodomain 1
+CcGene_04701_1	TALE	AT2G35940.1	1E-140	BEL1-like homeodomain 1
+CcGene_06930_1	TALE	AT5G02030.1	1E-113	TALE family protein
+CcGene_29710_1	TALE	AT2G27990.1	6E-80	BEL1-like homeodomain 8
+CcGene_23365_1	TALE	AT2G16400.1	2E-95	BEL1-like homeodomain 7
+CcGene_11434_1	TALE	AT2G27990.1	3E-82	BEL1-like homeodomain 8
+CcGene_19500_1	TALE	AT4G36870.2	1E-142	BEL1-like homeodomain 2
+CcGene_17119_1	TALE	AT4G32980.1	5E-88	homeobox gene 1
+CcGene_16514_1	HD-ZIP	AT1G69780.1	6E-73	HD-ZIP family protein
+CcGene_14007_1	HD-ZIP	AT1G69780.1	8E-88	HD-ZIP family protein
+CcGene_10417_1	HD-ZIP	AT3G01470.1	1E-89	homeobox 1
+CcGene_19605_1	HD-ZIP	AT3G01470.1	9E-45	homeobox 1
+CcGene_22454_1	HD-ZIP	AT5G15150.1	3E-74	homeobox 3
+CcGene_05133_1	HD-ZIP	AT4G40060.1	3E-76	homeobox protein 16
+CcGene_13326_1	HD-ZIP	AT1G69780.1	2E-67	HD-ZIP family protein
+CcGene_10148_1	HD-ZIP	AT3G01470.1	6E-51	homeobox 1
+CcGene_07756_1	HD-ZIP	AT4G40060.1	5E-79	homeobox protein 16
+CcGene_22013_1	HD-ZIP	AT4G17460.1	1E-83	Homeobox-leucine zipper protein 4 (HB-4) / HD-ZIP protein
+CcGene_07576_1	HD-ZIP	AT4G17460.1	4E-94	Homeobox-leucine zipper protein 4 (HB-4) / HD-ZIP protein
+CcGene_00775_1	HD-ZIP	AT4G16780.1	5E-98	homeobox protein 2
+CcGene_02497_1	HD-ZIP	AT5G06710.1	2E-87	homeobox from Arabidopsis thaliana
+CcGene_17181_1	HD-ZIP	AT5G06710.1	4E-84	homeobox from Arabidopsis thaliana
+CcGene_30316_1	HD-ZIP	AT3G01470.1	5E-41	homeobox 1
+CcGene_11134_1	HD-ZIP	AT3G01470.1	4E-47	homeobox 1
+CcGene_29612_1	HD-ZIP	AT4G37790.1	8E-87	HD-ZIP family protein
+CcGene_19539_1	HD-ZIP	AT4G17460.1	6E-89	Homeobox-leucine zipper protein 4 (HB-4) / HD-ZIP protein
+CcGene_06497_1	HD-ZIP	AT4G37790.1	5E-89	HD-ZIP family protein
+CcGene_05248_1	HD-ZIP	AT2G22430.1	8E-41	homeobox protein 6
+CcGene_15793_1	HD-ZIP	AT1G69780.1	3E-74	HD-ZIP family protein
+CcGene_29410_1	HD-ZIP	AT3G01470.1	5E-40	homeobox 1
+CcGene_28107_1	HD-ZIP	AT4G40060.1	3E-52	homeobox protein 16
+CcGene_15597_1	HD-ZIP	AT1G69780.1	1E-71	HD-ZIP family protein
+CcGene_29358_1	HD-ZIP	AT2G18550.1	6E-59	homeobox protein 21
+CcGene_02533_1	HD-ZIP	AT4G36740.1	1E-70	homeobox protein 40
+CcGene_19387_1	HD-ZIP	AT3G61890.1	8E-45	homeobox 12
+CcGene_21742_1	HD-ZIP	AT2G01430.1	6E-79	homeobox-leucine zipper protein 17
+CcGene_01957_1	HD-ZIP	AT4G37790.1	8E-54	HD-ZIP family protein
+CcGene_08446_1	HD-ZIP	AT2G46680.1	1E-52	homeobox 7
+CcGene_29809_1	HD-ZIP	AT5G03790.1	4E-47	homeobox 51
+CcGene_13452_1	HD-ZIP	AT4G36740.1	2E-62	homeobox protein 40
+CcGene_08942_1	HD-ZIP	AT2G22800.1	2E-51	HD-ZIP family protein
+CcGene_07935_1	HD-ZIP	AT4G37790.1	3E-56	HD-ZIP family protein
+CcGene_15474_1	TALE	AT1G62360.1	1E-127	KNOX/ELK homeobox transcription factor
+CcGene_07936_1	TALE	AT4G08150.1	1E-149	KNOTTED-like from Arabidopsis thaliana
+CcGene_13445_1	TALE	AT4G08150.1	1E-145	KNOTTED-like from Arabidopsis thaliana
+CcGene_06096_1	TALE	AT1G62360.1	1E-123	KNOX/ELK homeobox transcription factor
+CcGene_02721_1	TALE	AT1G23380.1	1E-134	KNOTTED1-like homeobox gene 6
+CcGene_02468_1	TALE	AT1G62360.1	1E-101	KNOX/ELK homeobox transcription factor
+CcGene_09947_1	TALE	AT1G62360.1	1E-101	KNOX/ELK homeobox transcription factor
+CcGene_05002_1	TALE	AT5G25220.2	1E-170	KNOTTED1-like homeobox gene 3
+CcGene_05869_1	TALE	AT5G25220.1	1E-171	KNOTTED1-like homeobox gene 3
+CcGene_23605_1	TALE	AT5G25220.2	1E-174	KNOTTED1-like homeobox gene 3
+CcGene_21807_1	TALE	AT1G23380.1	1E-117	KNOTTED1-like homeobox gene 6
+CcGene_06440_1	TALE	AT1G23380.2	3E-52	KNOTTED1-like homeobox gene 6
+CcGene_14443_1	TALE	AT1G62990.1	1E-89	KNOTTED-like homeobox of Arabidopsis thaliana 7
+CcGene_27504_1	TALE	AT1G62990.1	1E-167	KNOTTED-like homeobox of Arabidopsis thaliana 7
+CcGene_21579_1	TALE	AT1G62990.1	1E-151	KNOTTED-like homeobox of Arabidopsis thaliana 7
+CcGene_00662_1	HD-ZIP	AT1G79840.1	0	HD-ZIP family protein
+CcGene_23868_1	HD-ZIP	AT1G79840.1	0	HD-ZIP family protein
+CcGene_01609_1	HD-ZIP	AT4G21750.2	0	HD-ZIP family protein
+CcGene_25001_1	HD-ZIP	AT1G79840.1	0	HD-ZIP family protein
+CcGene_11486_1	HD-ZIP	AT4G04890.1	0	protodermal factor 2
+CcGene_14649_1	HD-ZIP	AT4G00730.1	0	HD-ZIP family protein
+CcGene_16367_1	HD-ZIP	AT1G05230.4	0	homeodomain GLABROUS 2
+CcGene_26940_1	HD-ZIP	AT4G00730.1	0	HD-ZIP family protein
+CcGene_18113_1	HD-ZIP	AT4G00730.1	0	HD-ZIP family protein
+CcGene_07339_1	HD-ZIP	AT4G00730.1	0	HD-ZIP family protein
+CcGene_09938_1	HD-ZIP	AT2G34710.1	0	HD-ZIP family protein
+CcGene_09328_1	HD-ZIP	AT1G52150.1	0	HD-ZIP family protein
+CcGene_13193_1	HD-ZIP	AT2G34710.1	0	HD-ZIP family protein
+CcGene_20038_1	HD-ZIP	AT5G60690.1	0	HD-ZIP family protein
+CcGene_16420_1	HD-ZIP	AT5G60690.1	0	HD-ZIP family protein
+CcGene_19625_1	HD-ZIP	AT5G46880.1	0	homeobox-7
+CcGene_10088_1	HD-ZIP	AT1G73360.1	0	homeodomain GLABROUS 11
+CcGene_05963_1	HD-ZIP	AT2G34710.1	0	HD-ZIP family protein
+CcGene_26107_1	HD-ZIP	AT4G04890.1	1E-118	protodermal factor 2
+CcGene_03199_1	HD-ZIP	AT1G52150.1	0	HD-ZIP family protein
+CcGene_27258_1	HD-ZIP	AT5G46880.1	1E-156	homeobox-7
+CcGene_00101_1	HB-PHD	AT3G19510.1	1E-102	Homeodomain-like protein with RING/FYVE/PHD-type zinc finger domain
+CcGene_25851_1	HB-PHD	AT3G19510.1	1E-107	Homeodomain-like protein with RING/FYVE/PHD-type zinc finger domain
+CcGene_00338_1	DBB	AT1G78600.1	6E-48	light-regulated zinc finger protein 1
+CcGene_00756_1	DBB	AT1G75540.1	1E-93	salt tolerance homolog2
+CcGene_00756_1	DBB	AT1G75540.1	1E-93	salt tolerance homolog2
+CcGene_02448_1	DBB	AT2G21320.1	3E-66	DBB family protein
+CcGene_02448_1	DBB	AT2G21320.1	3E-66	DBB family protein
+CcGene_07640_1	DBB	AT1G75540.1	8E-84	salt tolerance homolog2
+CcGene_07640_1	DBB	AT1G75540.1	8E-84	salt tolerance homolog2
+CcGene_08758_1	DBB	AT1G78600.1	3E-80	light-regulated zinc finger protein 1
+CcGene_12555_1	DBB	AT1G78600.1	5E-92	light-regulated zinc finger protein 1
+CcGene_12555_1	DBB	AT1G78600.1	5E-92	light-regulated zinc finger protein 1
+CcGene_16521_1	DBB	AT4G15250.1	1E-12	B-box type zinc finger protein with CCT domain
+CcGene_18737_1	DBB	AT4G38960.1	3E-77	DBB family protein
+CcGene_18737_1	DBB	AT4G38960.1	3E-77	DBB family protein
+CcGene_19985_1	DBB	AT1G06040.1	4E-98	DBB family protein
+CcGene_19985_1	DBB	AT1G06040.1	4E-98	DBB family protein
+CcGene_23024_1	DBB	AT1G75540.1	4E-89	salt tolerance homolog2
+CcGene_23024_1	DBB	AT1G75540.1	4E-89	salt tolerance homolog2
+CcGene_27165_1	DBB	AT1G75540.1	1E-71	salt tolerance homolog2
+CcGene_27165_1	DBB	AT1G75540.1	1E-71	salt tolerance homolog2
+CcGene_00536_1	CO-like	AT2G33500.1	2E-75	B-box type zinc finger protein with CCT domain
+CcGene_01954_1	CO-like	AT5G48250.1	1E-134	B-box type zinc finger protein with CCT domain
+CcGene_09129_1	CO-like	AT5G48250.1	1E-123	B-box type zinc finger protein with CCT domain
+CcGene_09550_1	CO-like	AT2G47890.1	5E-98	B-box type zinc finger protein with CCT domain
+CcGene_11110_1	CO-like	AT5G57660.1	3E-91	CONSTANS-like 5
+CcGene_12756_1	CO-like	AT3G02380.1	7E-96	CONSTANS-like 2
+CcGene_14389_1	CO-like	AT5G48250.1	1E-105	B-box type zinc finger protein with CCT domain
+CcGene_18561_1	CO-like	AT5G57660.1	3E-89	CONSTANS-like 5
+CcGene_19256_1	CO-like	AT1G25440.1	1E-92	B-box type zinc finger protein with CCT domain
+CcGene_24309_1	CO-like	AT5G24930.1	6E-90	CONSTANS-like 4
+CcGene_29221_1	CO-like	AT3G02380.1	1E-137	CONSTANS-like 2
+CcGene_29295_1	CO-like	AT2G47890.1	7E-87	B-box type zinc finger protein with CCT domain
+CcGene_29373_1	CO-like	AT1G25440.1	1E-100	B-box type zinc finger protein with CCT domain
+CcGene_03047_1	GRF	AT3G52910.1	8E-67	growth-regulating factor 4
+CcGene_04409_1	GRF	AT4G37740.1	5E-56	growth-regulating factor 2
+CcGene_05592_1	GRF	AT2G36400.1	1E-44	growth-regulating factor 3
+CcGene_13904_1	GRF	AT3G52910.1	4E-64	growth-regulating factor 4
+CcGene_22070_1	GRF	AT4G37740.1	1E-37	growth-regulating factor 2
+CcGene_25482_1	GRF	AT2G22840.1	4E-60	growth-regulating factor 1
+CcGene_01197_1	HB-other	AT1G28420.1	2E-15	homeobox-1
+CcGene_03196_1	HB-other	AT3G18380.1	9E-57	sequence-specific DNA binding transcription factors;sequence-specific DNA binding
+CcGene_04036_1	HB-other	AT1G30490.1	1E-21	HD-ZIP family protein
+CcGene_04713_1	HB-other	AT5G11270.1	3E-74	overexpressor of cationic peroxidase 3
+CcGene_16284_1	HB-other	AT1G28420.1	0	homeobox-1
+CcGene_17072_1	HB-other	AT5G44180.1	0	Homeodomain-like transcriptional regulator
+CcGene_19245_1	HB-other	AT1G28420.1	0	homeobox-1
+CcGene_23269_1	HB-other	AT4G03250.1	2E-68	HB-other family protein
+CcGene_26179_1	HB-other	AT3G18380.1	1E-118	sequence-specific DNA binding transcription factors;sequence-specific DNA binding
+CcGene_26563_1	HB-other	AT1G52150.3	3E-14	HD-ZIP family protein
+CcGene_27805_1	HB-other	AT4G04890.1	4E-28	protodermal factor 2
+CcGene_29576_1	HB-other	AT4G02560.2	1E-134	HB-other family protein
+CcGene_00306_1	WOX	AT2G28610.1	2E-36	WOX family protein
+CcGene_09562_1	WOX	AT1G46480.1	6E-73	WUSCHEL related homeobox 4
+CcGene_23249_1	WOX	AT3G18010.1	2E-60	WUSCHEL related homeobox 1
+CcGene_04969_1	WOX	AT5G59340.1	2E-46	WUSCHEL related homeobox 2
+CcGene_05528_1	WOX	AT1G46480.1	2E-54	WUSCHEL related homeobox 4
+CcGene_10187_1	WOX	AT2G17950.1	2E-50	WOX family protein
+CcGene_27266_1	WOX	AT3G11260.1	7E-45	WUSCHEL related homeobox 5
+CcGene_11335_1	WOX	AT2G33880.1	1E-78	homeobox-3
+CcGene_09872_1	WOX	AT3G18010.1	7E-38	WUSCHEL related homeobox 1
+CcGene_18541_1	WOX	AT4G35550.1	3E-76	WUSCHEL related homeobox 13
+CcGene_11671_1	WOX	AT4G35550.1	2E-85	WUSCHEL related homeobox 13
+CcGene_04550_1	WOX	AT3G03660.1	4E-44	WUSCHEL related homeobox 11
+CcGene_09749_1	WOX	AT4G35550.1	2E-59	WUSCHEL related homeobox 13
+CcGene_18351_1	WOX	AT5G17810.1	6E-40	WUSCHEL related homeobox 12
+CcGene_18127_1	TALE	AT2G16400.1	1E-118	BEL1-like homeodomain 7
+CcGene_07262_1	TALE	AT4G36870.2	1E-180	BEL1-like homeodomain 2
+CcGene_09842_1	TALE	AT4G34610.2	1E-132	BEL1-like homeodomain 6
+CcGene_24798_1	TALE	AT5G41410.1	1E-144	TALE family protein
+CcGene_03727_1	TALE	AT2G35940.1	1E-175	BEL1-like homeodomain 1
+CcGene_04701_1	TALE	AT2G35940.1	1E-140	BEL1-like homeodomain 1
+CcGene_06930_1	TALE	AT5G02030.1	1E-113	TALE family protein
+CcGene_29710_1	TALE	AT2G27990.1	6E-80	BEL1-like homeodomain 8
+CcGene_23365_1	TALE	AT2G16400.1	2E-95	BEL1-like homeodomain 7
+CcGene_11434_1	TALE	AT2G27990.1	3E-82	BEL1-like homeodomain 8
+CcGene_19500_1	TALE	AT4G36870.2	1E-142	BEL1-like homeodomain 2
+CcGene_17119_1	TALE	AT4G32980.1	5E-88	homeobox gene 1
+CcGene_16514_1	HD-ZIP	AT1G69780.1	6E-73	HD-ZIP family protein
+CcGene_14007_1	HD-ZIP	AT1G69780.1	8E-88	HD-ZIP family protein
+CcGene_10417_1	HD-ZIP	AT3G01470.1	1E-89	homeobox 1
+CcGene_19605_1	HD-ZIP	AT3G01470.1	9E-45	homeobox 1
+CcGene_22454_1	HD-ZIP	AT5G15150.1	3E-74	homeobox 3
+CcGene_05133_1	HD-ZIP	AT4G40060.1	3E-76	homeobox protein 16
+CcGene_13326_1	HD-ZIP	AT1G69780.1	2E-67	HD-ZIP family protein
+CcGene_10148_1	HD-ZIP	AT3G01470.1	6E-51	homeobox 1
+CcGene_07756_1	HD-ZIP	AT4G40060.1	5E-79	homeobox protein 16
+CcGene_22013_1	HD-ZIP	AT4G17460.1	1E-83	Homeobox-leucine zipper protein 4 (HB-4) / HD-ZIP protein
+CcGene_07576_1	HD-ZIP	AT4G17460.1	4E-94	Homeobox-leucine zipper protein 4 (HB-4) / HD-ZIP protein
+CcGene_00775_1	HD-ZIP	AT4G16780.1	5E-98	homeobox protein 2
+CcGene_02497_1	HD-ZIP	AT5G06710.1	2E-87	homeobox from Arabidopsis thaliana
+CcGene_17181_1	HD-ZIP	AT5G06710.1	4E-84	homeobox from Arabidopsis thaliana
+CcGene_30316_1	HD-ZIP	AT3G01470.1	5E-41	homeobox 1
+CcGene_11134_1	HD-ZIP	AT3G01470.1	4E-47	homeobox 1
+CcGene_29612_1	HD-ZIP	AT4G37790.1	8E-87	HD-ZIP family protein
+CcGene_19539_1	HD-ZIP	AT4G17460.1	6E-89	Homeobox-leucine zipper protein 4 (HB-4) / HD-ZIP protein
+CcGene_06497_1	HD-ZIP	AT4G37790.1	5E-89	HD-ZIP family protein
+CcGene_05248_1	HD-ZIP	AT2G22430.1	8E-41	homeobox protein 6
+CcGene_15793_1	HD-ZIP	AT1G69780.1	3E-74	HD-ZIP family protein
+CcGene_29410_1	HD-ZIP	AT3G01470.1	5E-40	homeobox 1
+CcGene_28107_1	HD-ZIP	AT4G40060.1	3E-52	homeobox protein 16
+CcGene_15597_1	HD-ZIP	AT1G69780.1	1E-71	HD-ZIP family protein
+CcGene_29358_1	HD-ZIP	AT2G18550.1	6E-59	homeobox protein 21
+CcGene_02533_1	HD-ZIP	AT4G36740.1	1E-70	homeobox protein 40
+CcGene_19387_1	HD-ZIP	AT3G61890.1	8E-45	homeobox 12
+CcGene_21742_1	HD-ZIP	AT2G01430.1	6E-79	homeobox-leucine zipper protein 17
+CcGene_01957_1	HD-ZIP	AT4G37790.1	8E-54	HD-ZIP family protein
+CcGene_08446_1	HD-ZIP	AT2G46680.1	1E-52	homeobox 7
+CcGene_29809_1	HD-ZIP	AT5G03790.1	4E-47	homeobox 51
+CcGene_13452_1	HD-ZIP	AT4G36740.1	2E-62	homeobox protein 40
+CcGene_08942_1	HD-ZIP	AT2G22800.1	2E-51	HD-ZIP family protein
+CcGene_07935_1	HD-ZIP	AT4G37790.1	3E-56	HD-ZIP family protein
+CcGene_15474_1	TALE	AT1G62360.1	1E-127	KNOX/ELK homeobox transcription factor
+CcGene_07936_1	TALE	AT4G08150.1	1E-149	KNOTTED-like from Arabidopsis thaliana
+CcGene_13445_1	TALE	AT4G08150.1	1E-145	KNOTTED-like from Arabidopsis thaliana
+CcGene_06096_1	TALE	AT1G62360.1	1E-123	KNOX/ELK homeobox transcription factor
+CcGene_02721_1	TALE	AT1G23380.1	1E-134	KNOTTED1-like homeobox gene 6
+CcGene_02468_1	TALE	AT1G62360.1	1E-101	KNOX/ELK homeobox transcription factor
+CcGene_09947_1	TALE	AT1G62360.1	1E-101	KNOX/ELK homeobox transcription factor
+CcGene_05002_1	TALE	AT5G25220.2	1E-170	KNOTTED1-like homeobox gene 3
+CcGene_05869_1	TALE	AT5G25220.1	1E-171	KNOTTED1-like homeobox gene 3
+CcGene_23605_1	TALE	AT5G25220.2	1E-174	KNOTTED1-like homeobox gene 3
+CcGene_21807_1	TALE	AT1G23380.1	1E-117	KNOTTED1-like homeobox gene 6
+CcGene_06440_1	TALE	AT1G23380.2	3E-52	KNOTTED1-like homeobox gene 6
+CcGene_14443_1	TALE	AT1G62990.1	1E-89	KNOTTED-like homeobox of Arabidopsis thaliana 7
+CcGene_27504_1	TALE	AT1G62990.1	1E-167	KNOTTED-like homeobox of Arabidopsis thaliana 7
+CcGene_21579_1	TALE	AT1G62990.1	1E-151	KNOTTED-like homeobox of Arabidopsis thaliana 7
+CcGene_00662_1	HD-ZIP	AT1G79840.1	0	HD-ZIP family protein
+CcGene_23868_1	HD-ZIP	AT1G79840.1	0	HD-ZIP family protein
+CcGene_01609_1	HD-ZIP	AT4G21750.2	0	HD-ZIP family protein
+CcGene_25001_1	HD-ZIP	AT1G79840.1	0	HD-ZIP family protein
+CcGene_11486_1	HD-ZIP	AT4G04890.1	0	protodermal factor 2
+CcGene_14649_1	HD-ZIP	AT4G00730.1	0	HD-ZIP family protein
+CcGene_16367_1	HD-ZIP	AT1G05230.4	0	homeodomain GLABROUS 2
+CcGene_26940_1	HD-ZIP	AT4G00730.1	0	HD-ZIP family protein
+CcGene_18113_1	HD-ZIP	AT4G00730.1	0	HD-ZIP family protein
+CcGene_07339_1	HD-ZIP	AT4G00730.1	0	HD-ZIP family protein
+CcGene_09938_1	HD-ZIP	AT2G34710.1	0	HD-ZIP family protein
+CcGene_09328_1	HD-ZIP	AT1G52150.1	0	HD-ZIP family protein
+CcGene_13193_1	HD-ZIP	AT2G34710.1	0	HD-ZIP family protein
+CcGene_20038_1	HD-ZIP	AT5G60690.1	0	HD-ZIP family protein
+CcGene_16420_1	HD-ZIP	AT5G60690.1	0	HD-ZIP family protein
+CcGene_19625_1	HD-ZIP	AT5G46880.1	0	homeobox-7
+CcGene_10088_1	HD-ZIP	AT1G73360.1	0	homeodomain GLABROUS 11
+CcGene_05963_1	HD-ZIP	AT2G34710.1	0	HD-ZIP family protein
+CcGene_26107_1	HD-ZIP	AT4G04890.1	1E-118	protodermal factor 2
+CcGene_03199_1	HD-ZIP	AT1G52150.1	0	HD-ZIP family protein
+CcGene_27258_1	HD-ZIP	AT5G46880.1	1E-156	homeobox-7
+CcGene_00101_1	HB-PHD	AT3G19510.1	1E-102	Homeodomain-like protein with RING/FYVE/PHD-type zinc finger domain
+CcGene_25851_1	HB-PHD	AT3G19510.1	1E-107	Homeodomain-like protein with RING/FYVE/PHD-type zinc finger domain
+CcGene_05704_1	Nin-like			
+CcGene_06264_1	B3			
+CcGene_27903_1	B3			
+CcGene_04076_1	DBB			
+CcGene_16724_1	DBB			
+CcGene_23262_1	DBB			
+CcGene_00215_1	ARR-B			
+CcGene_00358_1	ARR-B			
+CcGene_00721_1	ARR-B			
+CcGene_01444_1	ARR-B			
+CcGene_04271_1	ARR-B			
+CcGene_06994_1	ARR-B			
+CcGene_10566_1	ARR-B			
+CcGene_10993_1	ARR-B			
+CcGene_16307_1	ARR-B			
+CcGene_16907_1	ARR-B			
+CcGene_21153_1	ARR-B			
+CcGene_21170_1	ARR-B			
+CcGene_22396_1	ARR-B			
+CcGene_23609_1	ARR-B			
+CcGene_24941_1	ARR-B			
+CcGene_26796_1	ARR-B			
+CcGene_28649_1	ARR-B			
+CcGene_28714_1	ARR-B			
+CcGene_00314_1	G2-like			
+CcGene_00367_1	G2-like			
+CcGene_00403_1	G2-like			
+CcGene_01091_1	G2-like			
+CcGene_01176_1	G2-like			
+CcGene_01451_1	G2-like			
+CcGene_01639_1	G2-like			
+CcGene_02208_1	G2-like			
+CcGene_02896_1	G2-like			
+CcGene_02935_1	G2-like			
+CcGene_04101_1	G2-like			
+CcGene_04175_1	G2-like			
+CcGene_04234_1	G2-like			
+CcGene_05805_1	G2-like			
+CcGene_06216_1	G2-like			
+CcGene_07269_1	G2-like			
+CcGene_07667_1	G2-like			
+CcGene_07732_1	G2-like			
+CcGene_08635_1	G2-like			
+CcGene_08768_1	G2-like			
+CcGene_09159_1	G2-like			
+CcGene_10074_1	G2-like			
+CcGene_10468_1	G2-like			
+CcGene_10818_1	G2-like			
+CcGene_12605_1	G2-like			
+CcGene_13425_1	G2-like			
+CcGene_13560_1	G2-like			
+CcGene_13884_1	G2-like			
+CcGene_14285_1	G2-like			
+CcGene_14288_1	G2-like			
+CcGene_15026_1	G2-like			
+CcGene_15472_1	G2-like			
+CcGene_15592_1	G2-like			
+CcGene_15593_1	G2-like			
+CcGene_16068_1	G2-like			
+CcGene_17073_1	G2-like			
+CcGene_17315_1	G2-like			
+CcGene_17459_1	G2-like			
+CcGene_17557_1	G2-like			
+CcGene_17647_1	G2-like			
+CcGene_17761_1	G2-like			
+CcGene_18079_1	G2-like			
+CcGene_18159_1	G2-like			
+CcGene_18910_1	G2-like			
+CcGene_19773_1	G2-like			
+CcGene_20472_1	G2-like			
+CcGene_20556_1	G2-like			
+CcGene_21022_1	G2-like			
+CcGene_21301_1	G2-like			
+CcGene_21692_1	G2-like			
+CcGene_22488_1	G2-like			
+CcGene_22580_1	G2-like			
+CcGene_23833_1	G2-like			
+CcGene_24043_1	G2-like			
+CcGene_24194_1	G2-like			
+CcGene_24773_1	G2-like			
+CcGene_25076_1	G2-like			
+CcGene_25568_1	G2-like			
+CcGene_26676_1	G2-like			
+CcGene_27835_1	G2-like			
+CcGene_28152_1	G2-like			
+CcGene_28435_1	G2-like			
+CcGene_28437_1	G2-like			
+CcGene_28477_1	G2-like			
+CcGene_28478_1	G2-like			
+CcGene_29005_1	G2-like			
+CcGene_29015_1	G2-like			
+CcGene_30240_1	G2-like			
+CcGene_30304_1	G2-like			
+CcGene_30370_1	G2-like			
+CcGene_00364_1	MIKC_MADS			
+CcGene_02043_1	MIKC_MADS			
+CcGene_03202_1	MIKC_MADS			
+CcGene_03203_1	MIKC_MADS			
+CcGene_03420_1	MIKC_MADS			
+CcGene_04607_1	MIKC_MADS			
+CcGene_05154_1	MIKC_MADS			
+CcGene_05387_1	MIKC_MADS			
+CcGene_06047_1	MIKC_MADS			
+CcGene_06049_1	MIKC_MADS			
+CcGene_06056_1	MIKC_MADS			
+CcGene_06289_1	MIKC_MADS			
+CcGene_06405_1	MIKC_MADS			
+CcGene_06806_1	MIKC_MADS			
+CcGene_06807_1	MIKC_MADS			
+CcGene_07639_1	MIKC_MADS			
+CcGene_08316_1	MIKC_MADS			
+CcGene_13007_1	MIKC_MADS			
+CcGene_14420_1	MIKC_MADS			
+CcGene_15544_1	MIKC_MADS			
+CcGene_18560_1	MIKC_MADS			
+CcGene_18944_1	MIKC_MADS			
+CcGene_19250_1	MIKC_MADS			
+CcGene_21939_1	MIKC_MADS			
+CcGene_22500_1	MIKC_MADS			
+CcGene_23023_1	MIKC_MADS			
+CcGene_23153_1	MIKC_MADS			
+CcGene_23965_1	MIKC_MADS			
+CcGene_25866_1	MIKC_MADS			
+CcGene_26113_1	MIKC_MADS			
+CcGene_26186_1	MIKC_MADS			
+CcGene_27228_1	MIKC_MADS			
+CcGene_06406_1	M-type_MADS			
+CcGene_07819_1	M-type_MADS			
+CcGene_15437_1	M-type_MADS			
+CcGene_17531_1	M-type_MADS			
+CcGene_23713_1	M-type_MADS			
+CcGene_26790_1	M-type_MADS			
+CcGene_27886_1	M-type_MADS			
+CcGene_00069_1	MYB			
+CcGene_00227_1	MYB			
+CcGene_00320_1	MYB			
+CcGene_00965_1	MYB			
+CcGene_01033_1	MYB			
+CcGene_01998_1	MYB			
+CcGene_02188_1	MYB			
+CcGene_02332_1	MYB			
+CcGene_02609_1	MYB			
+CcGene_02820_1	MYB			
+CcGene_02898_1	MYB			
+CcGene_03425_1	MYB			
+CcGene_03614_1	MYB			
+CcGene_04551_1	MYB			
+CcGene_04633_1	MYB			
+CcGene_04980_1	MYB			
+CcGene_05067_1	MYB			
+CcGene_05487_1	MYB			
+CcGene_05860_1	MYB			
+CcGene_05973_1	MYB			
+CcGene_06632_1	MYB			
+CcGene_07116_1	MYB			
+CcGene_07160_1	MYB			
+CcGene_08370_1	MYB			
+CcGene_08672_1	MYB			
+CcGene_08875_1	MYB			
+CcGene_10821_1	MYB			
+CcGene_11137_1	MYB			
+CcGene_11948_1	MYB			
+CcGene_12091_1	MYB			
+CcGene_12666_1	MYB			
+CcGene_12855_1	MYB			
+CcGene_13283_1	MYB			
+CcGene_13634_1	MYB			
+CcGene_13772_1	MYB			
+CcGene_14177_1	MYB			
+CcGene_14292_1	MYB			
+CcGene_14397_1	MYB			
+CcGene_14411_1	MYB			
+CcGene_14418_1	MYB			
+CcGene_14925_1	MYB			
+CcGene_14928_1	MYB			
+CcGene_15085_1	MYB			
+CcGene_15101_1	MYB			
+CcGene_16001_1	MYB			
+CcGene_16037_1	MYB			
+CcGene_16130_1	MYB			
+CcGene_16448_1	MYB			
+CcGene_17135_1	MYB			
+CcGene_17349_1	MYB			
+CcGene_17553_1	MYB			
+CcGene_17873_1	MYB			
+CcGene_18440_1	MYB			
+CcGene_18806_1	MYB			
+CcGene_19518_1	MYB			
+CcGene_20149_1	MYB			
+CcGene_20216_1	MYB			
+CcGene_20735_1	MYB			
+CcGene_20808_1	MYB			
+CcGene_21178_1	MYB			
+CcGene_21182_1	MYB			
+CcGene_21321_1	MYB			
+CcGene_21734_1	MYB			
+CcGene_22094_1	MYB			
+CcGene_22438_1	MYB			
+CcGene_23314_1	MYB			
+CcGene_23381_1	MYB			
+CcGene_23451_1	MYB			
+CcGene_23663_1	MYB			
+CcGene_23698_1	MYB			
+CcGene_23954_1	MYB			
+CcGene_24140_1	MYB			
+CcGene_24186_1	MYB			
+CcGene_24552_1	MYB			
+CcGene_24641_1	MYB			
+CcGene_24889_1	MYB			
+CcGene_24991_1	MYB			
+CcGene_25447_1	MYB			
+CcGene_25856_1	MYB			
+CcGene_26054_1	MYB			
+CcGene_26137_1	MYB			
+CcGene_27628_1	MYB			
+CcGene_27849_1	MYB			
+CcGene_28233_1	MYB			
+CcGene_28277_1	MYB			
+CcGene_29449_1	MYB			
+CcGene_29466_1	MYB			
+CcGene_29899_1	MYB			
+CcGene_30012_1	MYB			
+CcGene_00135_1	MYB_related			
+CcGene_00191_1	MYB_related			
+CcGene_00198_1	MYB_related			
+CcGene_00585_1	MYB_related			
+CcGene_00761_1	MYB_related			
+CcGene_00795_1	MYB_related			
+CcGene_01896_1	MYB_related			
+CcGene_02353_1	MYB_related			
+CcGene_02829_1	MYB_related			
+CcGene_03095_1	MYB_related			
+CcGene_03112_1	MYB_related			
+CcGene_03386_1	MYB_related			
+CcGene_03762_1	MYB_related			
+CcGene_03822_1	MYB_related			
+CcGene_04193_1	MYB_related			
+CcGene_04645_1	MYB_related			
+CcGene_05074_1	MYB_related			
+CcGene_05320_1	MYB_related			
+CcGene_05552_1	MYB_related			
+CcGene_05577_1	MYB_related			
+CcGene_05650_1	MYB_related			
+CcGene_05866_1	MYB_related			
+CcGene_06147_1	MYB_related			
+CcGene_06164_1	MYB_related			
+CcGene_06906_1	MYB_related			
+CcGene_07254_1	MYB_related			
+CcGene_07403_1	MYB_related			
+CcGene_07599_1	MYB_related			
+CcGene_08320_1	MYB_related			
+CcGene_08427_1	MYB_related			
+CcGene_08432_1	MYB_related			
+CcGene_08579_1	MYB_related			
+CcGene_08844_1	MYB_related			
+CcGene_08884_1	MYB_related			
+CcGene_08966_1	MYB_related			
+CcGene_09066_1	MYB_related			
+CcGene_09203_1	MYB_related			
+CcGene_09754_1	MYB_related			
+CcGene_09810_1	MYB_related			
+CcGene_10076_1	MYB_related			
+CcGene_10222_1	MYB_related			
+CcGene_10975_1	MYB_related			
+CcGene_12363_1	MYB_related			
+CcGene_12582_1	MYB_related			
+CcGene_12775_1	MYB_related			
+CcGene_13271_1	MYB_related			
+CcGene_13278_1	MYB_related			
+CcGene_13317_1	MYB_related			
+CcGene_13502_1	MYB_related			
+CcGene_14008_1	MYB_related			
+CcGene_14117_1	MYB_related			
+CcGene_14406_1	MYB_related			
+CcGene_14417_1	MYB_related			
+CcGene_14520_1	MYB_related			
+CcGene_15612_1	MYB_related			
+CcGene_15738_1	MYB_related			
+CcGene_16242_1	MYB_related			
+CcGene_16384_1	MYB_related			
+CcGene_16557_1	MYB_related			
+CcGene_17125_1	MYB_related			
+CcGene_17127_1	MYB_related			
+CcGene_18176_1	MYB_related			
+CcGene_18267_1	MYB_related			
+CcGene_18508_1	MYB_related			
+CcGene_18837_1	MYB_related			
+CcGene_19339_1	MYB_related			
+CcGene_19816_1	MYB_related			
+CcGene_19994_1	MYB_related			
+CcGene_20238_1	MYB_related			
+CcGene_20270_1	MYB_related			
+CcGene_20271_1	MYB_related			
+CcGene_20346_1	MYB_related			
+CcGene_20902_1	MYB_related			
+CcGene_20980_1	MYB_related			
+CcGene_21011_1	MYB_related			
+CcGene_21949_1	MYB_related			
+CcGene_22485_1	MYB_related			
+CcGene_22691_1	MYB_related			
+CcGene_23911_1	MYB_related			
+CcGene_24401_1	MYB_related			
+CcGene_24490_1	MYB_related			
+CcGene_24700_1	MYB_related			
+CcGene_24701_1	MYB_related			
+CcGene_24870_1	MYB_related			
+CcGene_27367_1	MYB_related			
+CcGene_27878_1	MYB_related			
+CcGene_27894_1	MYB_related			
+CcGene_28748_1	MYB_related			
+CcGene_29040_1	MYB_related			
+CcGene_29043_1	MYB_related			
+CcGene_29112_1	MYB_related			

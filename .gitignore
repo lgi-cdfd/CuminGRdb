@@ -1,0 +1,8 @@
+# Ignore large raw FASTA reference genome assembly (>100MB hard limit on GitHub)
+# Reference assembly FASTA is available via NCBI BioProject PRJNA1469524 / SRA SRR10076761 & Zenodo
+data/raw/Cuminum_cyminum_genome_assembly.fasta
+data/raw/Cuminum_cyminum_genome_assembly.fasta.gz
+
+# Ignore local temporary files
+*.tmp
+.DS_Store

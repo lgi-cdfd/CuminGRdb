@@ -1,0 +1,40 @@
+{
+  "assemblies": [
+    {
+      "name": "Cuminum_cyminum_Genome",
+      "sequence": {
+        "type": "ReferenceSequenceTrack",
+        "trackId": "Cuminum_cyminum_Reference",
+        "adapter": {
+          "type": "IndexedFastaAdapter",
+          "fastaLocation": { "uri": "data/raw/Cuminum_cyminum_genome_assembly.fasta" },
+          "faiLocation": { "uri": "data/raw/Cuminum_cyminum_genome_assembly.fasta.fai" }
+        }
+      }
+    }
+  ],
+  "tracks": [
+    {
+      "trackId": "cumin_gene_models",
+      "name": "Gene Models & Annotations",
+      "assemblyNames": ["Cuminum_cyminum_Genome"],
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "Gff3TabixAdapter",
+        "gffGzLocation": { "uri": "jbrowse/tracks/cumin_gene_models.gff3.gz" },
+        "index": { "location": { "uri": "jbrowse/tracks/cumin_gene_models.gff3.gz.tbi" } }
+      }
+    },
+    {
+      "trackId": "cumin_ssr_markers",
+      "name": "SSR Markers & PCR Primers",
+      "assemblyNames": ["Cuminum_cyminum_Genome"],
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "Gff3TabixAdapter",
+        "gffGzLocation": { "uri": "jbrowse/tracks/cumin_ssr_markers.gff3.gz" },
+        "index": { "location": { "uri": "jbrowse/tracks/cumin_ssr_markers.gff3.gz.tbi" } }
+      }
+    }
+  ]
+}
