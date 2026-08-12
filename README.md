@@ -11,7 +11,7 @@ This repository contains the complete bioinformatics processing scripts, data mo
 
 ---
 
-## 👥 Authors & Affiliations
+## Authors & Affiliations
 
 **Ajay Kumar Mahato**<sup>1*</sup>, **Ramesh Eerapagula**<sup>1</sup>, **Rakesh Singh**<sup>2</sup>, **Avinash Mishra**<sup>3</sup>, **Lakshmi Devi**<sup>1</sup>, **Priyanka Kushwaha**<sup>1</sup>, **Ankit Bhagat**<sup>1</sup>, **Bishun Deo Prasad**<sup>4</sup>, **Sangita Sahni**<sup>5</sup>, **Nagendra Kumar Singh**<sup>6</sup>
 
@@ -22,12 +22,12 @@ This repository contains the complete bioinformatics processing scripts, data mo
 5. **Department of Plant Pathology**, T.C.A., Dholi, Dr. Rajendra Prasad Central Agricultural University, Pusa, Bihar, India
 6. **National Institute for Plant Biotechnology** (ICAR-NIPB), Pusa Campus, New Delhi 110012, India
 
-📧 **Corresponding Author**: Dr. Ajay Kumar Mahato (`akmahato@cdfd.org.in`)  
-🌐 **Web Portal**: [https://database.cdfd.org.in/cumingrdb/](https://database.cdfd.org.in/cumingrdb/)
+**Corresponding Author**: Dr. Ajay Kumar Mahato (`akmahato@cdfd.org.in`)  
+**Web Portal**: [https://database.cdfd.org.in/cumingrdb/](https://database.cdfd.org.in/cumingrdb/)
 
 ---
 
-## 📦 Reference Datasets & Download Links (`data/`)
+## Reference Datasets & Download Links (`data/`)
 
 The compressed FASTA sequence reference files are provided in `data/`:
 
@@ -41,7 +41,7 @@ The compressed FASTA sequence reference files are provided in `data/`:
 
 ---
 
-## 📊 Standardized Results Datasets (`results/tables/`)
+## Standardized Results Datasets (`results/tables/`)
 
 All processed result files follow standardized publication-grade `CuminGRdb_` naming conventions:
 
@@ -60,7 +60,7 @@ All processed result files follow standardized publication-grade `CuminGRdb_` na
 
 ---
 
-## 📂 Complete Pipeline Scripts Inventory (`scripts/`)
+## Complete Pipeline Scripts Inventory (`scripts/`)
 
 ```
 ScientificData_Project-Github/scripts/
@@ -78,7 +78,7 @@ ScientificData_Project-Github/scripts/
 
 ---
 
-## 🚀 Bioinformatic Script Header Standard
+## Bioinformatic Script Header Standard
 
 All scripts inside `scripts/` follow a uniform, standardized header block format:
 
@@ -97,7 +97,7 @@ All scripts inside `scripts/` follow a uniform, standardized header block format
 
 ---
 
-## 📖 Citation
+## Citation
 
 If you use these scripts, datasets, or the CuminGRdb portal in your research, please cite:
 
@@ -113,7 +113,7 @@ If you use these scripts, datasets, or the CuminGRdb portal in your research, pl
 
 ---
 
-## 📜 License
+## License
 
 - **Source Code & Pipeline Scripts**: [MIT License](https://opensource.org/licenses/MIT)
 - **Genomic & Functional Datasets**: Creative Commons Attribution 4.0 International ([CC BY 4.0](https://creativecommons.org/licenses/by/4.0/))
