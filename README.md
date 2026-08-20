@@ -6,6 +6,8 @@
 [![NCBI SRA](https://img.shields.io/badge/NCBI_SRA-SRR10076761-059669.svg)](https://www.ncbi.nlm.nih.gov/sra/SRR10076761)
 [![Python](https://img.shields.io/badge/Python-v3.10%2B-3776AB.svg)](https://www.python.org/)
 [![Database Portal](https://img.shields.io/badge/Database_Portal-CuminGRdb-0284c7.svg)](https://database.cdfd.org.in/cumingrdb/)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22015054.svg)](https://doi.org/10.5281/zenodo.22015054)
+
 
 This repository contains the complete bioinformatics processing scripts, data models, and analytical pipelines used for the draft genome assembly, structural/functional annotation, and downstream multi-omics analysis of cumin (_Cuminum cyminum_ L.), as presented in **CuminGRdb**.
 
