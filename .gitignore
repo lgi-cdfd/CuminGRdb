@@ -6,3 +6,4 @@ data/raw/Cuminum_cyminum_genome_assembly.fasta.gz
 # Ignore local temporary files
 *.tmp
 .DS_Store
+Zenodo/

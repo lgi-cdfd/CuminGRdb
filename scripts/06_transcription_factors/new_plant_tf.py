@@ -227,13 +227,13 @@ ax.set_ylabel(
 # TITLE
 # ============================================================
 
-ax.set_title(
-    r"Transcription factor families in "
-    r"$\it{Cuminum\ cyminum}$",
-    fontsize=14,
-    fontweight="bold",
-    pad=14
-)
+#ax.set_title(
+#    r"Transcription factor families in "
+#    r"$\it{Cuminum\ cyminum}$",
+#    fontsize=14,
+#    fontweight="bold",
+#    pad=14
+#)
 
 # ============================================================
 # GRID
